@@ -33,7 +33,7 @@
         </table>
         <button class="btn btn-dark"><a href="/riwayatDonasi">Kembali</a></button>
         @if ($donatur[0]->status == 'menunggu konfirmasi')
-            <button class="btn btn-dark"><a href="/updateStatus/{{ $donatur->id }}">Update Status</a></button>
+            <button class="btn btn-dark"><a href="/updateStatus/{{ $donatur[0]->id }}">Update Status</a></button>
         @endif
     </div>
 </div>

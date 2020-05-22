@@ -22,7 +22,7 @@
                 <td>
                     <button type="button"class="btn btn-warning btn-sm"><a href="/detailDonatur/{{ $key->id }}">Lihat Detail</a></button>
                     @if ($key->status == 'menunggu konfirmasi')
-                    <button type="button" class="btn btn-success btn-sm"><a href="/updateStatus/{{ $key->id }}">Update Status</a></button>
+                        <button type="button" class="btn btn-success btn-sm"><a href="/updateStatus/{{ $key->id }}">Update Status</a></button>
                     @endif
                 </td>
             </tr>
