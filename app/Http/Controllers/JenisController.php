@@ -19,11 +19,26 @@ class JenisController extends Controller
         return view('barang.formStok', ['jenis' => $jenis]);
     }
 
+    public function formEdit($id){
+        $jenis = Jenis::where('id', $id)->get();
+
+        return view('barang.formEdit', ['jenis' => $jenis]);
+    }
+
     public function tambahStok($id){
         $data = Jenis::where('id', $id)->get();
         $jumlah = $data[0]->jumlah_donasi + request('jumlah');
 
         Jenis::where('id', $id)->update(['jumlah_donasi' => $jumlah]);
+
+        return redirect('/listBarang');
+    }
+
+    public function editBarang($id){
+        $jenis['jenis_donasi'] = request('jenis_donasi');
+        $jenis['jumlah_donasi'] = request('jumlah_donasi');
+
+        Jenis::where('id', $id)->update($jenis);
 
         return redirect('/listBarang');
     }

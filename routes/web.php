@@ -49,7 +49,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 	Route::get('/listBarang', 'JenisController@index');
 	Route::get('/formStok/{id}', 'JenisController@formStok');
+	Route::get('/formEdit/{id}', 'JenisController@formEdit');
 	Route::post('/tambahBarang', 'JenisController@tambahBarang');
 	Route::post('/tambahStok/{id}', 'JenisController@tambahStok');
+	Route::post('/editBarang/{id}', 'JenisController@editBarang');
 
 });

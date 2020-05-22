@@ -19,7 +19,7 @@ class CreateDonaturTable extends Migration
             $table->string('kontak_donatur');
             $table->date('tgl_donasi');
             $table->string('status');
-            $table->integer('id_jenis')->unsigned();
+            $table->bigInteger('id_jenis')->unsigned();
             $table->foreign('id_jenis')->references('id')->on('jenis');
             $table->integer('jumlah');
         });

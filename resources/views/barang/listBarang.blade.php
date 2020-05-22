@@ -23,6 +23,7 @@
                 <td>{{ $key->jumlah_donasi }}</td>
                 <td>
                     <a href="/formStok/{{ $key->id }}" class="btn btn-warning btn-sm">Tambah Jumlah</a>
+                    <a href="/formEdit/{{ $key->id }}" class="btn btn-warning btn-sm">Edit</a>
                 </td>
             </tr>
         @endforeach

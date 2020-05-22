@@ -16,9 +16,9 @@ class CreateDistribusiTable extends Migration
         Schema::create('distribusi', function (Blueprint $table) {
             $table->id();
             $table->date('tgl_distribusi');
-            $table->integer('id_penerima')->unsigned();
+            $table->bigInteger('id_penerima')->unsigned();
             $table->foreign('id_penerima')->references('id')->on('penerima');
-            $table->integer('id_jenis')->unsigned();
+            $table->bigInteger('id_jenis')->unsigned();
             $table->foreign('id_jenis')->references('id')->on('jenis');
             $table->integer('jumlah_distribusi');
         });
