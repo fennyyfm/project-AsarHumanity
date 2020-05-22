@@ -28,7 +28,7 @@
 			<td>{{$penerima->jumlah_menerima}}</td>
 			<td>
 				<a href="/penerima/{{$penerima->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-				<a href="/penerima/{{$penerima->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus?')">Delete</a>
+				<!-- <a href="/penerima/printpenerimaid/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus?')">Delete</a> !-->
 			</td>
 		</tr>
 		@endforeach
