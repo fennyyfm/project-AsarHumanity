@@ -14,7 +14,7 @@ class CreateDistribusiTable extends Migration
     public function up()
     {
         Schema::create('distribusi', function (Blueprint $table) {
-            $table->integer('id_penerima')->primary()->autoIncrement();
+            $table->integer('id_distribusi')->primary()->autoIncrement();
             $table->date('tgl_distribusi');
             $table->integer('id_penerima')->unsigned();
             $table->foreign('id_penerima')->references('id_penerima')->on('penerima');
