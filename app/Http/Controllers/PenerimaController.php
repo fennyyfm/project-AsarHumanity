@@ -37,8 +37,8 @@ class PenerimaController extends Controller
     }
 
     public function delete($id){
-    	$penerima = Penerima::where('id', $id);
-    	$penerima->delete();
+        Penerima::where('id', $id)->delete();
+        
     	return redirect('/penerima')->with('sukses', 'Data berhasil dihapus');
 	}
 
