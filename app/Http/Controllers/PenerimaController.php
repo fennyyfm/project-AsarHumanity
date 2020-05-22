@@ -24,7 +24,7 @@ class PenerimaController extends Controller
     }
 
     public function edit($id){
-    	$penerima = Penerima::where('id_penerima', $id)->first();
+    	$penerima = Penerima::where('id', $id)->first();
 
     	return view('penerima/edit',['penerima'=>$penerima]);
     }

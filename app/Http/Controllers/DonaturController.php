@@ -51,14 +51,14 @@ class DonaturController extends Controller
 
     public function detailDonatur($id){
         $donatur = Donatur::join('jenis', 'donatur.id_jenis', '=', 'jenis.id')
-                    ->where('donatur.id_donatur', $id)
+                    ->where('donatur.id', $id)
                     ->get();
 
         return view('donatur.detailDonatur', ['donatur' => $donatur]);
     }
 
     public function updateStatus($id){
-        Donatur::where('id_donatur', $id)->update(['status' => 'sudah konfirmasi']);
+        Donatur::where('id', $id)->update(['status' => 'sudah konfirmasi']);
 
         $data = Donatur::where('id', $id)->get();
         $jumlah = Jenis::where('id', $data[0]->id_jenis)->get();
