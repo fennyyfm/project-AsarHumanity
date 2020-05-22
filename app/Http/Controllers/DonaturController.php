@@ -13,7 +13,7 @@ class DonaturController extends Controller
     }
 
     public function formDonatur(){
-        $jenis = Jenis::select('id_jenis', 'jenis_donasi')
+        $jenis = Jenis::select('id', 'jenis_donasi')
                     ->orderBy('jenis_donasi')
                     ->get();
 
@@ -50,7 +50,7 @@ class DonaturController extends Controller
     }
 
     public function detailDonatur($id){
-        $donatur = Donatur::join('jenis', 'donatur.id_jenis', '=', 'jenis.id_jenis')
+        $donatur = Donatur::join('jenis', 'donatur.id_jenis', '=', 'jenis.id')
                     ->where('donatur.id_donatur', $id)
                     ->get();
 
@@ -60,10 +60,10 @@ class DonaturController extends Controller
     public function updateStatus($id){
         Donatur::where('id_donatur', $id)->update(['status' => 'sudah konfirmasi']);
 
-        $data = Donatur::where('id_donatur', $id)->get();
-        $jumlah = Jenis::where('id_jenis', $data[0]->id_jenis)->get();
+        $data = Donatur::where('id', $id)->get();
+        $jumlah = Jenis::where('id', $data[0]->id_jenis)->get();
         $total = $jumlah[0]->jumlah_donasi + $data[0]->jumlah;
-        Jenis::where('id_jenis',  $data[0]->id_jenis)->update(['jumlah_donasi' => $total]);
+        Jenis::where('id',  $data[0]->id_jenis)->update(['jumlah_donasi' => $total]);
 
         return redirect('/konfirmasiDonasi');
     }

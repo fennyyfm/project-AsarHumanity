@@ -30,14 +30,14 @@ class PenerimaController extends Controller
     }
 
     public function update(Request $request, $id){
-    	$penerima = Penerima::where('id_penerima', $id);
+    	$penerima = Penerima::where('id', $id);
 
     	$penerima->update($request->except(['_token']));
     	return redirect('/penerima')->with('sukses', 'Data berhasil di update');
     }
 
     public function delete($id){
-    	$penerima = Penerima::where('id_penerima', $id);
+    	$penerima = Penerima::where('id', $id);
     	$penerima->delete();
     	return redirect('/penerima')->with('sukses', 'Data berhasil dihapus');
 	}
@@ -49,7 +49,7 @@ class PenerimaController extends Controller
     }
 
     public function pilih($id){
-    	$penerima = Penerima::where('id_penerima', $id)->first();
+    	$penerima = Penerima::where('id', $id)->first();
         $jenis = Jenis::orderBy('jenis_donasi')->get();
 
     	return view('penerima/pilih',['penerima'=>$penerima], ['jenis' => $jenis]);
@@ -65,11 +65,11 @@ class PenerimaController extends Controller
 
         $distribusi->save();
 
-    	$data = Penerima::where('id_penerima', $id)->get();
-        Penerima::where('id_penerima', $id)->update(['jumlah_menerima' => ($data[0]->jumlah_menerima + request('jumlah'))]);
+    	$data = Penerima::where('id', $id)->get();
+        Penerima::where('id', $id)->update(['jumlah_menerima' => ($data[0]->jumlah_menerima + request('jumlah'))]);
 
-        $jenis = Jenis::where('id_jenis', request('jenis'))->get();
-		Jenis::where('id_jenis', request('jenis'))->update(['jumlah_donasi' => ($jenis[0]->jumlah_donasi - request('jumlah'))]);
+        $jenis = Jenis::where('id', request('jenis'))->get();
+		Jenis::where('id', request('jenis'))->update(['jumlah_donasi' => ($jenis[0]->jumlah_donasi - request('jumlah'))]);
 
     	return redirect('/rekomendasi')->with('sukses', 'Data berhasil diupdate');
     }

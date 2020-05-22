@@ -22,7 +22,7 @@
                 <td>{{ $key->jenis_donasi }}</td>
                 <td>{{ $key->jumlah_donasi }}</td>
                 <td>
-                    <a href="/formStok/{{ $key->id_jenis }}" class="btn btn-warning btn-sm">Tambah Jumlah</a>
+                    <a href="/formStok/{{ $key->id }}" class="btn btn-warning btn-sm">Tambah Jumlah</a>
                 </td>
             </tr>
         @endforeach
@@ -58,7 +58,7 @@
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-                </form>      
+                </form>
         </div>
     </div>
 </div>

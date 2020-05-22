@@ -6,14 +6,14 @@
 	<h3 class="panel-title">Pilih Paket</h3>
 </div>
 <div class="panel-body">
-	<form action="/penerima/{{$penerima->id_penerima}}/kirim" method="POST">
+	<form action="/penerima/{{$penerima[0]->id}}/kirim" method="POST">
 		{{csrf_field()}}
 		<div class="form-group">
             <label>Jenis Paket</label>
             <select name="jenis" class="form-control">
                 <option>-- Pilih Jenis Paket --</option>
                 @foreach ($jenis as $key)
-                    <option value="{{ $key->id_jenis }}">{{ $key->jenis_donasi }}</option>
+                    <option value="{{ $key->id }}">{{ $key->jenis_donasi }}</option>
                 @endforeach
             </select>
         </div>

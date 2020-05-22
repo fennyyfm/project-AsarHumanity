@@ -7,14 +7,14 @@
 	<div class="right">
 		<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr-plus-circle"></i>Tambah data penerima</button>
 	</div>
-		
+
 </div>
 <div class="panel-body">
 	<table class="table table-hover">
 		<tr>
 			<th>Nama Penerima</th>
 			<th>Kontak Penerima</th>
-			<th>Daerah</th>	
+			<th>Daerah</th>
 			<th>Alamat</th>
 			<th>Jumlah Menerima</th>
 			<th></th>
@@ -27,8 +27,8 @@
 			<td>{{$penerima->alamat}}</td>
 			<td>{{$penerima->jumlah_menerima}}</td>
 			<td>
-				<a href="/penerima/{{$penerima->id_penerima}}/edit" class="btn btn-warning btn-sm">Edit</a>
-				<a href="/penerima/{{$penerima->id_penerima}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus?')">Delete</a>
+				<a href="/penerima/{{$penerima->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+				<a href="/penerima/{{$penerima->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin mau dihapus?')">Delete</a>
 			</td>
 		</tr>
 		@endforeach
@@ -76,7 +76,7 @@
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 		        <button type="submit" class="btn btn-primary">Submit</button>
 			</div>
-				</form>      
+				</form>
 		</div>
 	</div>
 </div>

@@ -6,7 +6,7 @@
 	<h3 class="panel-title">Edit data penerima</h3>
 </div>
 <div class="panel-body">
-	<form action="/penerima/{{$penerima->id_penerima}}/update" method="POST">
+	<form action="/penerima/{{$penerima->id}}/update" method="POST">
 		{{csrf_field()}}
 		<div class="form-group">
 			<label for="nama_depan">Nama Penerima</label>

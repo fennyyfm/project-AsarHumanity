@@ -25,7 +25,7 @@
 			<td>{{$penerima->alamat}}</td>
 			<td>{{$penerima->jumlah_menerima}}</td>
 			<td>
-                <a href="/penerima/{{$penerima->id_penerima}}/pilih" class="btn btn-success btn-sm">Pilih</a>
+                <a href="/penerima/{{$penerima->id}}/pilih" class="btn btn-success btn-sm">Pilih</a>
 			</td>
         </tr>
         @endforeach

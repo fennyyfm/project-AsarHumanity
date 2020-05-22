@@ -14,12 +14,12 @@ class CreateDistribusiTable extends Migration
     public function up()
     {
         Schema::create('distribusi', function (Blueprint $table) {
-            $table->integer('id_distribusi')->autoIncrement();
+            $table->id();
             $table->date('tgl_distribusi');
             $table->integer('id_penerima')->unsigned();
-            $table->foreign('id_penerima')->references('id_penerima')->on('penerima');
+            $table->foreign('id_penerima')->references('id')->on('penerima');
             $table->integer('id_jenis')->unsigned();
-            $table->foreign('id_jenis')->references('id_jenis')->on('jenis');
+            $table->foreign('id_jenis')->references('id')->on('jenis');
             $table->integer('jumlah_distribusi');
         });
     }

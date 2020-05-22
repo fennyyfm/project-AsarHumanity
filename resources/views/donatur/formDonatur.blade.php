@@ -42,7 +42,7 @@
                 <select name="jenis" class="form-control">
                     <option>-- Pilih Jenis Donasi --</option>
                     @foreach ($jenis as $key)
-                        <option value="{{ $key->id_jenis }}">{{ $key->jenis_donasi }}</option>
+                        <option value="{{ $key->id }}">{{ $key->jenis_donasi }}</option>
                     @endforeach
                 </select>
             </div>

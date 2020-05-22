@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="panel-heading">
-    <form action="/tambahStok/{{ $jenis[0]->id_jenis }}" method="POST">
+    <form action="/tambahStok/{{ $jenis[0]->id }}" method="POST">
         @csrf
         <fieldset>
             <legend>FORM TAMBAH STOK BARANG</legend>
