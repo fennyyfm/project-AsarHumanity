@@ -14,7 +14,7 @@ class CreateDonaturTable extends Migration
     public function up()
     {
         Schema::create('donatur', function (Blueprint $table) {
-            $table->integer('id_donatur')->primary()->autoIncrement();
+            $table->integer('id_donatur')->autoIncrement();
             $table->string('nama_donatur');
             $table->string('kontak_donatur');
             $table->date('tgl_donasi');
