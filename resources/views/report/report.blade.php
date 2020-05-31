@@ -50,10 +50,10 @@
                                             <tr>
                                                 <td>{{ $loop->index + 1 }}</td>
                                                 <td>{{ $key->tgl_distribusi }}</td>
-                                                <td>{{ $key->jenis_donasi }}</td>
+                                                <td>{{ $key->jenis_barang }}</td>
                                                 <td>{{ $key->sum }}</td>
                                                 <td>
-                                                    <button class='btn btn-dark'><a href="/detailReport/{{ $key->tgl_distribusi }}/{{ $key->jenis_donasi }}">Lihat Detail</a></button>
+                                                    <button class='btn btn-dark'><a href="/detailReport/{{ $key->tgl_distribusi }}/{{ $key->jenis_barang }}">Lihat Detail</a></button>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -70,10 +70,10 @@
                                         @foreach($report['jenis'] as $key)
                                             <tr>
                                                 <td>{{ $loop->index + 1 }}</td>
-                                                <td>{{ $key->jenis_donasi }}</td>
+                                                <td>{{ $key->jenis_barang }}</td>
                                                 <td>{{ $key->sum }}</td>
                                                 <td>
-                                                    <button class='btn btn-dark'><a href="/detailReport/{{ $key->jenis_donasi }}">Lihat Detail</a></button>
+                                                    <button class='btn btn-dark'><a href="/detailReport/{{ $key->jenis_barang }}">Lihat Detail</a></button>
                                                 </td>
                                             </tr>
                                         @endforeach

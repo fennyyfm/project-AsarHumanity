@@ -19,8 +19,8 @@ class CreateDistribusiTable extends Migration
             $table->bigInteger('id_penerima')->unsigned();
             $table->foreign('id_penerima')->references('id')->on('penerima');
             $table->bigInteger('id_jenis')->unsigned();
-            $table->foreign('id_jenis')->references('id')->on('jenis');
-            $table->integer('jumlah_distribusi');
+            $table->foreign('id_jenis')->references('id')->on('barang');
+            $table->bigInteger('jumlah_distribusi')->unsigned();
         });
     }
 

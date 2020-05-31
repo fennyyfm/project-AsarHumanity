@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Penerima;
 use \App\Distribusi;
-use \App\Jenis;
+use \App\Barang;
 
 
 class PenerimaController extends Controller
@@ -38,7 +38,7 @@ class PenerimaController extends Controller
 
     public function delete($id){
         Penerima::where('id', $id)->delete();
-        
+
     	return redirect('/penerima')->with('sukses', 'Data berhasil dihapus');
 	}
 
@@ -50,7 +50,7 @@ class PenerimaController extends Controller
 
     public function pilih($id){
     	$penerima = Penerima::where('id', $id)->first();
-        $jenis = Jenis::orderBy('jenis_donasi')->get();
+        $jenis = Barang::orderBy('jenis_barang')->get();
 
     	return view('penerima/pilih',['penerima'=>$penerima], ['jenis' => $jenis]);
     }
@@ -65,12 +65,12 @@ class PenerimaController extends Controller
 
         $distribusi->save();
 
-    	$data = Penerima::where('id', $id)->get();
+    	  $data = Penerima::where('id', $id)->get();
         Penerima::where('id', $id)->update(['jumlah_menerima' => ($data[0]->jumlah_menerima + request('jumlah'))]);
 
-        $jenis = Jenis::where('id', request('jenis'))->get();
-		Jenis::where('id', request('jenis'))->update(['jumlah_donasi' => ($jenis[0]->jumlah_donasi - request('jumlah'))]);
+        $jenis = Barang::where('id', request('jenis'))->get();
+		    Barang::where('id', request('jenis'))->update(['jumlah_barang' => ($jenis[0]->jumlah_barang - request('jumlah'))]);
 
-    	return redirect('/rekomendasi')->with('sukses', 'Data berhasil diupdate');
+        return redirect('/rekomendasi')->with('sukses', 'Data berhasil diupdate');
     }
 }

@@ -13,16 +13,16 @@
 			<input type="text" class="form-control" name ="nama_penerima" value="{{$penerima->nama_penerima}}" placeholder="Nama Penerima">
 		</div>
 		<div class="form-group">
-			<label for="kontak_penerima">Kontak Penerima</label>
-			<input type="text" class="form-control" name ="kontak_penerima" value="{{$penerima->kontak_penerima}}" placeholder="Kontak Penerima">
-		</div>
-		<div class="form-group">
-			<label for="daerah">Daerah</label>
-			<input type="text" class="form-control" name="daerah" value="{{$penerima->daerah}}" placeholder="Agama">
-		</div>
-		<div class="form-group">
 			<label for="alamat">Alamat</label>
 			<textarea class="form-control"  name="alamat" rows="3">{{$penerima->alamat}}</textarea>
+		</div>
+		<div class="form-group">
+			<label for="daerah">Kota</label>
+			<input type="text" class="form-control" name="kota" value="{{$penerima->kota}}" placeholder="Kota">
+		</div>
+		<div class="form-group">
+			<label for="daerah">Provinsi</label>
+			<input type="text" class="form-control" name="provinsi" value="{{$penerima->provinsi}}" placeholder="Provinsi">
 		</div>
 		<div class="form-group">
 			<label for="telah_menerima">Jumlah menerima</label>

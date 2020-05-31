@@ -13,18 +13,18 @@
 	<table class="table table-hover">
 		<tr>
 			<th>Nama Penerima</th>
-			<th>Kontak Penerima</th>
-			<th>Daerah</th>
 			<th>Alamat</th>
+			<th>Kota</th>
+			<th>Provinsi</th>
 			<th>Jumlah Menerima</th>
 			<th></th>
 		</tr>
 		@foreach($data_penerima as $penerima)
 		<tr>
 			<td>{{$penerima->nama_penerima}}</td>
-			<td>{{$penerima->kontak_penerima}}</td>
-			<td>{{$penerima->daerah}}</td>
 			<td>{{$penerima->alamat}}</td>
+			<td>{{$penerima->kota}}</td>
+			<td>{{$penerima->provinsi}}</td>
 			<td>{{$penerima->jumlah_menerima}}</td>
 			<td>
 				<a href="/penerima/{{$penerima->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
@@ -56,16 +56,16 @@
 					    <input type="text" class="form-control" name ="nama_penerima" placeholder="Nama Penerima">
 					</div>
 					<div class="form-group">
-					   	<label for="kontak_penerima">Kontak Penerima</label>
-					    <input type="text" class="form-control" name ="kontak_penerima" placeholder="Kontak Penerima">
-					</div>
-					<div class="form-group">
-					   	<label for="daerah">Daerah</label>
-					    <input type="text" class="form-control" name ="daerah" placeholder="Daerah">
-					</div>
-					<div class="form-group">
 						<label for="alamat">Alamat</label>
 					   	<textarea class="form-control" name="alamat" rows="3"></textarea>
+					</div>
+					<div class="form-group">
+					   	<label for="kota">Kota</label>
+					    <input type="text" class="form-control" name ="kota" placeholder="Kota">
+					</div>
+					<div class="form-group">
+					   	<label for="provinsi">Provinsi</label>
+					    <input type="text" class="form-control" name ="provinsi" placeholder="Provinsi">
 					</div>
 					<div class="form-group">
 					    <label for="jumlah_menerima">Jumlah menerima</label>

@@ -28,23 +28,14 @@
     <fieldset>
         <legend>FORM DONASI</legend>
         <hr>
-        <div class=" col-lg-5">
+        <div class="col-lg-5">
             <div class="form-group">
                 <label>Nama Donatur</label>
                 <input type="text" name="nama_donatur" class="form-control">
             </div>
             <div class="form-group">
-                <label>Kontak</label>
+                <label>Nomor HP</label>
                 <input type="text" name="kontak_donatur" class="form-control">
-            </div>
-            <div class="form-group">
-                <label>Jenis Donasi</label>
-                <select name="jenis" class="form-control">
-                    <option>-- Pilih Jenis Donasi --</option>
-                    @foreach ($jenis as $key)
-                        <option value="{{ $key->id }}">{{ $key->jenis_donasi }}</option>
-                    @endforeach
-                </select>
             </div>
             <div class="form-group">
                 <label>Jumlah</label>

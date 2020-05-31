@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDonaturTable extends Migration
+class CreateBarangPenerimaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateDonaturTable extends Migration
      */
     public function up()
     {
-        Schema::create('donatur', function (Blueprint $table) {
+        Schema::create('barang_penerima', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_donatur');
-            $table->string('kontak_donatur');
-            $table->date('tgl_donasi');
-            $table->string('status');
-            $table->date('tgl_konfirmasi')->nullable()->default(null);
+            $table->bigInteger('id_distribusi')->unsigned();
+            $table->foreign('id_distribusi')->references('id')->on('distribusi');
+            $table->bigInteger('id_jenis')->unsigned();
+            $table->foreign('id_jenis')->references('id')->on('barang');
             $table->bigInteger('jumlah')->unsigned();
         });
     }
@@ -31,6 +30,6 @@ class CreateDonaturTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('donatur');
+        Schema::dropIfExists('barang_penerima');
     }
 }

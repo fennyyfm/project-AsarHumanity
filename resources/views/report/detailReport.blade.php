@@ -34,7 +34,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Tanggal</th>
-                                        <th>Daerah Penerima</th>
+                                        <th>Kota Penerima</th>
                                         <th>Jenis</th>
                                         <th>Jumlah</th>
                                     </tr>
@@ -42,8 +42,8 @@
                                         <tr>
                                             <td>{{ $loop->index + 1 }}</td>
                                             <td>{{ $key->tgl_distribusi }}</td>
-                                            <td>{{ $key->daerah }}</td>
-                                            <td>{{ $key->jenis_donasi }}</td>
+                                            <td>{{ $key->kota }}</td>
+                                            <td>{{ $key->jenis_barang }}</td>
                                             <td>{{ $key->sum }}</td>
                                         </tr>
                                     @endforeach
@@ -58,4 +58,3 @@
     </div>
 </body>
 </html>
-

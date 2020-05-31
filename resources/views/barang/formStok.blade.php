@@ -11,11 +11,11 @@
                 <table class="table table-hover">
                     <tr>
                         <td>Jenis Barang</td>
-                        <td>{{ $jenis[0]->jenis_donasi }}</td>
+                        <td>{{ $jenis[0]->jenis_barang }}</td>
                     </tr>
                     <tr>
                         <td>jumlah Tersedia</td>
-                        <td>{{ $jenis[0]->jumlah_donasi }}</td>
+                        <td>{{ $jenis[0]->jumlah_barang }}</td>
                     </tr>
                     <tr>
                         <td>Tambah Jumlah</td>

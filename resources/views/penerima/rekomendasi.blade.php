@@ -8,27 +8,26 @@
 <div class="panel-body">
 	<table class="table table-hover">
 		<tr>
-            <th>No</th>
+      <th>No</th>
 			<th>Nama Penerima</th>
-			<th>Kontak Penerima</th>
-			<th>Daerah</th>
-			<th>Alamat</th>
+			<th>Kota</th>
+			<th>Provinsi</th>
 			<th>Jumlah Paket Diterima</th>
 			<th></th>
 		</tr>
 		@foreach($data_penerima as $penerima)
-		<tr>
-            <td>{{ $loop->index + 1 }}</td>
-			<td>{{$penerima->nama_penerima}}</td>
-			<td>{{$penerima->kontak_penerima}}</td>
-			<td>{{$penerima->daerah}}</td>
-			<td>{{$penerima->alamat}}</td>
-			<td>{{$penerima->jumlah_menerima}}</td>
-			<td>
-                <a href="/penerima/{{$penerima->id}}/pilih" class="btn btn-success btn-sm">Pilih</a>
-			</td>
-        </tr>
-        @endforeach
+			<tr>
+        <td>{{ $loop->index + 1 }}</td>
+				<td>{{$penerima->nama_penerima}}</td>
+				<td>{{$penerima->kota}}</td>
+				<td>{{$penerima->provinsi}}</td>
+				<td>{{$penerima->alamat}}</td>
+				<td>{{$penerima->jumlah_menerima}}</td>
+				<td>
+					<a href="/penerima/{{$penerima->id}}/pilih" class="btn btn-success btn-sm">Pilih</a>
+				</td>
+	    </tr>
+    @endforeach
 	</table>
 </div>
 

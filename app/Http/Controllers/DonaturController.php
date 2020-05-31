@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Donatur;
-use App\Jenis;
+use App\Barang;
 
 class DonaturController extends Controller
 {
@@ -13,11 +13,7 @@ class DonaturController extends Controller
     }
 
     public function formDonatur(){
-        $jenis = Jenis::select('id', 'jenis_donasi')
-                    ->orderBy('jenis_donasi')
-                    ->get();
-
-        return view('donatur.formDonatur', ['jenis' => $jenis]);
+        return view('donatur.formDonatur');
     }
 
     public function addDonatur(){
@@ -25,7 +21,6 @@ class DonaturController extends Controller
 
         $donatur->nama_donatur = request('nama_donatur');
         $donatur->kontak_donatur = request('kontak_donatur');
-        $donatur->id_jenis = request('jenis');
         $donatur->jumlah = request('jumlah');
         $donatur->tgl_donasi = date('Y-m-d');
         $donatur->status = 'menunggu konfirmasi';
@@ -50,20 +45,19 @@ class DonaturController extends Controller
     }
 
     public function detailDonatur($id){
-        $donatur = Donatur::join('jenis', 'donatur.id_jenis', '=', 'jenis.id')
-                    ->where('donatur.id', $id)
-                    ->get();
+        $donatur = Donatur::where('donatur.id', $id)->get();
 
-        return view('donatur.detailDonatur', ['donatur' => $donatur]);
+        return view('donasi.detailDonatur', ['donatur' => $donatur]);
     }
 
     public function updateStatus($id){
-        Donatur::where('id', $id)->update(['status' => 'sudah konfirmasi']);
+      Donatur::where('id', $id)->update(['status' => 'sudah konfirmasi']);
+      Donatur::where('id', $id)->update(['tgl_konfirmasi' => date('Y-m-d')]);
 
         $data = Donatur::where('id', $id)->get();
-        $jumlah = Jenis::where('id', $data[0]->id_jenis)->get();
-        $total = $jumlah[0]->jumlah_donasi + $data[0]->jumlah;
-        Jenis::where('id',  $data[0]->id_jenis)->update(['jumlah_donasi' => $total]);
+        $jumlah = Barang::where('jenis_barang', 'Uang')->get();
+        $total = $jumlah[0]->jumlah_barang + $data[0]->jumlah;
+        Barang::where('jenis_barang', 'Uang')->update(['jumlah_barang' => $total]);
 
         return redirect('/konfirmasiDonasi');
     }

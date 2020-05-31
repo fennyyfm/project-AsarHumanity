@@ -19,8 +19,8 @@
         @foreach($jenis as $key)
             <tr>
                 <td>{{ $loop->index + 1 }}</td>
-                <td>{{ $key->jenis_donasi }}</td>
-                <td>{{ $key->jumlah_donasi }}</td>
+                <td>{{ $key->jenis_barang }}</td>
+                <td>{{ $key->jumlah_barang }}</td>
                 <td>
                     <a href="/formStok/{{ $key->id }}" class="btn btn-warning btn-sm">Tambah Jumlah</a>
                     <a href="/formEdit/{{ $key->id }}" class="btn btn-warning btn-sm">Edit</a>
@@ -63,4 +63,3 @@
         </div>
     </div>
 </div>
-

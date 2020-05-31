@@ -4,48 +4,48 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Distribusi;
-use App\Jenis;
+use App\Barang;
 use DB;
 
 class DistribusiController extends Controller
 {
     public function index(){
-        $report['tgl'] = Distribusi::join('jenis', 'distribusi.id_jenis', '=', 'jenis.id')
-                                    ->select('distribusi.tgl_distribusi', 'jenis.jenis_donasi')
+        $report['tgl'] = Distribusi::join('barang', 'distribusi.id_jenis', '=', 'barang.id')
+                                    ->select('distribusi.tgl_distribusi', 'barang.jenis_barang')
                                     ->selectRaw('SUM(distribusi.jumlah_distribusi) as sum')
-                                    ->groupBy('distribusi.tgl_distribusi','jenis.jenis_donasi')
+                                    ->groupBy('distribusi.tgl_distribusi','barang.jenis_barang')
                                     ->orderBy('distribusi.tgl_distribusi', 'desc')
                                     ->get();
 
-        $report['jenis'] = Distribusi::join('jenis', 'distribusi.id_jenis', '=', 'jenis.id')
-                            ->select('jenis.jenis_donasi')
+        $report['jenis'] = Distribusi::join('barang', 'distribusi.id_jenis', '=', 'barang.id')
+                            ->select('barang.jenis_barang')
                             ->selectRaw('SUM(distribusi.jumlah_distribusi) as sum')
-                            ->groupBy('jenis.jenis_donasi')
+                            ->groupBy('barang.jenis_barang')
                             ->get();
 
         return view('report.report', ['report' => $report]);
     }
 
     public function detailReportTanggal($tgl, $id){
-        $report = Distribusi::join('jenis', 'distribusi.id_jenis', '=', 'jenis.id')
+        $report = Distribusi::join('barang', 'distribusi.id_jenis', '=', 'barang.id')
                             ->join('penerima', 'distribusi.id_penerima', '=', 'penerima.id')
-                            ->select('distribusi.tgl_distribusi', 'jenis.jenis_donasi', 'penerima.daerah')
+                            ->select('distribusi.tgl_distribusi', 'barang.jenis_barang', 'penerima.kota')
                             ->selectRaw('SUM(distribusi.jumlah_distribusi) as sum')
-                            ->where('jenis.jenis_donasi', $id)
+                            ->where('barang.jenis_barang', $id)
                             ->where('distribusi.tgl_distribusi', $tgl)
-                            ->groupBy('distribusi.tgl_distribusi', 'jenis.jenis_donasi', 'penerima.daerah')
+                            ->groupBy('distribusi.tgl_distribusi', 'barang.jenis_barang', 'penerima.kota')
                             ->get();
 
         return view('report.detailReport', ['report' => $report]);
     }
 
     public function detailReportJenis($id){
-        $report = Distribusi::join('jenis', 'distribusi.id_jenis', '=', 'jenis.id')
+        $report = Distribusi::join('barang', 'distribusi.id_jenis', '=', 'barang.id')
                             ->join('penerima', 'distribusi.id_penerima', '=', 'penerima.id')
-                            ->select('distribusi.tgl_distribusi', 'jenis.jenis_donasi', 'penerima.daerah')
+                            ->select('distribusi.tgl_distribusi', 'barang.jenis_barang', 'penerima.kota')
                             ->selectRaw('SUM(distribusi.jumlah_distribusi) as sum')
-                            ->where('jenis.jenis_donasi', $id)
-                            ->groupBy('distribusi.tgl_distribusi', 'jenis.jenis_donasi', 'penerima.daerah')
+                            ->where('barang.jenis_barang', $id)
+                            ->groupBy('distribusi.tgl_distribusi', 'barang.jenis_barang', 'penerima.kota')
                             ->get();
 
         return view('report.detailReport', ['report' => $report]);

@@ -47,11 +47,11 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/updateStatus/{id}', 'DonaturController@updateStatus');
 
 
-	Route::get('/listBarang', 'JenisController@index');
-	Route::get('/formStok/{id}', 'JenisController@formStok');
-	Route::get('/formEdit/{id}', 'JenisController@formEdit');
-	Route::post('/tambahBarang', 'JenisController@tambahBarang');
-	Route::post('/tambahStok/{id}', 'JenisController@tambahStok');
-	Route::post('/editBarang/{id}', 'JenisController@editBarang');
+	Route::get('/listBarang', 'BarangController@index');
+	Route::get('/formStok/{id}', 'BarangController@formStok');
+	Route::get('/formEdit/{id}', 'BarangController@formEdit');
+	Route::post('/tambahBarang', 'BarangController@tambahBarang');
+	Route::post('/tambahStok/{id}', 'BarangController@tambahStok');
+	Route::post('/editBarang/{id}', 'BarangController@editBarang');
 
 });

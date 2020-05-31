@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index(){
     	$data['penerima'] = \App\Penerima::count();
-        $data['barang'] = \App\Jenis::sum('jumlah_donasi');
+        $data['barang'] = \App\Barang::sum('jumlah_barang');
         $data['konfirmasi'] = \App\Donatur::where('status', 'menunggu konfirmasi')->count();
         $data['riwayat_donasi'] = \App\Donatur::count();
         $min = \App\Penerima::selectRaw('min(jumlah_menerima) as min')->get();

@@ -10,11 +10,11 @@
 		{{csrf_field()}}
 		<div class="form-group">
 			<label for="jenis_barang">Jenis Barang</label>
-			<input type="text" class="form-control" name ="jenis_donasi" value="{{$jenis[0]->jenis_donasi}}">
+			<input type="text" class="form-control" name ="jenis_barang" value="{{$jenis[0]->jenis_barang}}">
 		</div>
 		<div class="form-group">
 			<label for="jumlah_barang">Jumlah Barang</label>
-			<input type="text" class="form-control" name ="jumlah_donasi" value="{{$jenis[0]->jumlah_donasi}}">
+			<input type="text" class="form-control" name ="jumlah_barang" value="{{$jenis[0]->jumlah_barang}}">
 		</div>
 		<button type="submit" class="btn btn-warning">Update</button>
 	</form>

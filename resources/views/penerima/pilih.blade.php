@@ -13,7 +13,7 @@
             <select name="jenis" class="form-control">
                 <option>-- Pilih Jenis Paket --</option>
                 @foreach ($jenis as $key)
-                    <option value="{{ $key->id }}">{{ $key->jenis_donasi }}</option>
+                    <option value="{{ $key->id }}">{{ $key->jenis_barang }}</option>
                 @endforeach
             </select>
         </div>

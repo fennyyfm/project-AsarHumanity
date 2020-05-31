@@ -5,7 +5,7 @@
 	<title>Dashboard | Admin ASAR Humanity</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- VENDOR CSS -->
 	<link rel="stylesheet" href="{{asset('admin/assets/vendor/bootstrap/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('admin/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
@@ -47,7 +47,7 @@
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 	</div>
-	<!-- END WRAPPER -->	
+	<!-- END WRAPPER -->
 </body>
 <footer>
 	<!-- Footer -->
@@ -59,7 +59,7 @@
 	<script src="{{asset('admin/assets/vendor/jquery/jquery.min.js')}}"></script>
 	<script src="{{asset('admin/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 	<script src="{{asset('admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
-	<script src="{{asset('admin/assets/scripts/klorofil-common.js')}}"></script>
+    <script src="{{asset('admin/assets/scripts/klorofil-common.js')}}"></script>
 </footer>
 
 </html>
