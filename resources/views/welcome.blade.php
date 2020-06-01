@@ -33,6 +33,9 @@
 							<a href="/formDonatur" class="btn btn-warning btn-sm">Donasi</a>
 							<a href="/formRelawan" class="btn btn-warning btn-sm">Daftar Relawan</a>
 							<a href="/formPelatihan" class="btn btn-warning btn-sm">Daftar Pelatihan</a>
+							<br>
+							<br>
+							<a href="/formAbsensiRelawan" class="btn btn-warning btn-sm">Absensi Relawan</a>
 							<div>
 								<a href="/login" >Login Admin</a> |
 								<a href="/report" >Report</a>

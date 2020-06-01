@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Relawan;
+use App\Absensi;
 
 class RelawanController extends Controller
 {
@@ -33,8 +34,29 @@ class RelawanController extends Controller
   }
 
   public function detailRelawan($id){
-      $relawan = Relawan::where('relawan.id', $id)->get();
+    $relawan['data'] = Relawan::where('relawan.id', $id)->get();
+    $relawan['absensi'] = Absensi::where('id_relawan', $id)
+                                  ->orderBy('tgl_absensi', 'desc')
+                                  ->get();
 
       return view('relawan.detailRelawan', ['relawan' => $relawan]);
+  }
+
+  public function formAbsensiRelawan(){
+    $relawan = Relawan::all();
+      return view('relawan.formAbsensiRelawan', ['relawan' => $relawan]);
+  }
+
+  public function addAbsensiRelawan(){
+      $absensi = new Absensi();
+
+      $absensi->id_relawan = request('nama');
+      $absensi->tgl_absensi = date('Y-m-d');
+      $absensi->aktivitas = request('aktivitas');
+      $absensi->keterangan = request('keterangan');
+
+      $absensi->save();
+
+      return redirect('/')->with('msg', 'berhasil absen');
   }
 }

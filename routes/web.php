@@ -24,7 +24,9 @@ Route::post('/add', 'DonaturController@addDonatur');
 Route::get('/lalala', 'DonaturController@coba');
 
 Route::get('/formRelawan', 'RelawanController@formRelawan');
+Route::get('/formAbsensiRelawan', 'RelawanController@formAbsensiRelawan');
 Route::post('/addRelawan', 'RelawanController@addRelawan');
+Route::post('/addAbsensiRelawan', 'RelawanController@addAbsensiRelawan');
 
 Route::get('/formPelatihan', 'PelatihanController@formPelatihan');
 Route::post('/addPelatihan', 'PelatihanController@addPelatihan');
