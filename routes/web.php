@@ -21,8 +21,6 @@ Route::get('/', 'DonaturController@index');
 Route::get('/formDonatur', 'DonaturController@formDonatur');
 Route::post('/add', 'DonaturController@addDonatur');
 
-Route::get('/lalala', 'DonaturController@coba');
-
 Route::get('/formRelawan', 'RelawanController@formRelawan');
 Route::get('/formAbsensiRelawan', 'RelawanController@formAbsensiRelawan');
 Route::post('/addRelawan', 'RelawanController@addRelawan');
@@ -65,4 +63,6 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::post('/tambahStok/{id}', 'BarangController@tambahStok');
 	Route::post('/editBarang/{id}', 'BarangController@editBarang');
 
+	Route::get('/formKegiatan', 'KegiatanController@formKegiatan');
+	Route::post('/tambahKegiatan', 'KegiatanController@tambahKegiatan');
 });

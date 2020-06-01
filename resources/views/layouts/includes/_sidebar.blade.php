@@ -10,6 +10,7 @@
 						<li><a href="/rekomendasi" class="bar"><i class="lnr lnr-bullhorn"></i> <span>Distribusi</span></a></li>
 						<li><a href="/listRelawan" class="bar"><i class="fa fa-group"></i> <span>Relawan</span></a></li>
 						<li><a href="/listPelatihan" class="bar"><i class="fa fa-group"></i> <span>Pelatihan</span></a></li>
+						<li><a href="/formKegiatan" class="bar"><i class="fa fa-book"></i> <span> Form Tambah Kegiatan</span></a></li>
 					</ul>
 				</nav>
 			</div>
