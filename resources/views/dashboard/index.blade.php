@@ -17,6 +17,15 @@
                 </div>
                 <div class="col-md-4">
                     <div class="metric">
+                        <a href="/listBarang"><span class="icon"><i class="fa fa-money"></i></span>
+                        <p>
+                            <span class="number">{{$data['uang']}}</span>
+                            <span class="title">Uang</span>
+                        </p></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric">
                         <a href="/listBarang"><span class="icon"><i class="fa fa-shopping-bag"></i></span>
                         <p>
                             <span class="number">{{$data['barang']}}</span>
@@ -53,7 +62,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="metric">
-                        <a href="/listRelawan"><span class="icon"><i class="lnr lnr-bullhorn"></i></span>
+                        <a href="/listRelawan"><span class="icon"><i class="fa fa-users"></i></span>
                         <p>
                             <span class="number">{{$data['relawan']}}</span>
                             <span class="title">Relawan</span>
@@ -62,7 +71,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="metric">
-                        <a href="/listPelatihan"><span class="icon"><i class="lnr lnr-bullhorn"></i></span>
+                        <a href="/listPelatihan"><span class="icon"><i class="fa fa-group"></i></span>
                         <p>
                             <span class="number">{{$data['pelatihan']}}</span>
                             <span class="title">Pelatihan</span>

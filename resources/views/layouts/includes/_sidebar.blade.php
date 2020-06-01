@@ -8,8 +8,8 @@
 						<!--<li><a href="/konfirmasiDonasi" class="bar"><i class="lnr lnr-star"></i> <span>Konfirmasi Donasi</span></a></li>!-->
 						<li><a href="/riwayatDonasi" class="bar"><i class="lnr lnr-history"></i> <span>Riwayat Donasi</span></a></li>
 						<li><a href="/rekomendasi" class="bar"><i class="lnr lnr-bullhorn"></i> <span>Distribusi</span></a></li>
-						<li><a href="/listRelawan" class="bar"><i class="lnr lnr-bullhorn"></i> <span>Relawan</span></a></li>
-						<li><a href="/listPelatihan" class="bar"><i class="lnr lnr-bullhorn"></i> <span>Pelatihan</span></a></li>
+						<li><a href="/listRelawan" class="bar"><i class="fa fa-group"></i> <span>Relawan</span></a></li>
+						<li><a href="/listPelatihan" class="bar"><i class="fa fa-group"></i> <span>Pelatihan</span></a></li>
 					</ul>
 				</nav>
 			</div>

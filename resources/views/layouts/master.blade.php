@@ -52,7 +52,7 @@
 <footer>
 	<!-- Footer -->
 	<div class="container-fluid">
-		<p class="copyright">&copy; 2020 Aisyah&Fenny</p>
+		<p class="copyright">&copy; 2020 Asar Humanity</p>
 	</div>
 
 	<!-- Javascript -->

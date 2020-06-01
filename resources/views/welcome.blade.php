@@ -28,7 +28,7 @@
 			<div class="vertical-align-middle">
 				<div class="auth-box ">
 					<div class="left">
-						<div class="content">
+						<div class="content" id='chart' onload="tampil()">
 							<h3>Donasi Yuk!</h3>
 							<a href="/formDonatur" class="btn btn-warning btn-sm">Donasi</a>
 							<a href="/formRelawan" class="btn btn-warning btn-sm">Daftar Relawan</a>
@@ -36,7 +36,7 @@
 							<div>
 								<a href="/login" >Login Admin</a> |
 								<a href="/report" >Report</a>
-							</div>
+              </div>
 							<br>
 							<p class="msg">{{ session('msg') }}</p>
 						</div>
@@ -54,4 +54,56 @@
 	<!-- END WRAPPER -->
 </body>
 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+		['Tanggal Konfirmasi', 'Donatur'],
+		@foreach($data as $key)
+			@php echo '["'.$key->tgl_konfirmasi.'",'.$key->count.'],';
+      @endphp
+      @endforeach
+	]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Grafik Donasi Harian', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.LineChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+<script type="text/javascript">
+	function tampil() {
+    if ($data != []) {
+      document.getElementById('exampleModal').style.display = 'block';
+    }
+	}
+</script>
+
+<script type="text/javascript">
+	function tutup() {
+		document.getElementById('exampleModal').style.display = 'none';
+	}
+</script>
 </html>
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:block">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tutup()">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div id="piechart"></div>
+		</div>
+	</div>
+</div>

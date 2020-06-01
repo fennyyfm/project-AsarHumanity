@@ -9,7 +9,13 @@ use App\Barang;
 class DonaturController extends Controller
 {
     public function index(){
-        return view('welcome');
+      $data = Donatur::select('tgl_konfirmasi')
+                      ->selectRaw('COUNT(id) as count')
+                      ->where('status', 'sudah konfirmasi')
+                      ->groupBy('tgl_konfirmasi')
+                      ->get();
+
+      return view('welcome', [ 'data' => $data ] );
     }
 
     public function formDonatur(){
