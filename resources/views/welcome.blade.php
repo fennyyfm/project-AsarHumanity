@@ -31,6 +31,8 @@
 						<div class="content">
 							<h3>Donasi Yuk!</h3>
 							<a href="/formDonatur" class="btn btn-warning btn-sm">Donasi</a>
+							<a href="/formRelawan" class="btn btn-warning btn-sm">Daftar Relawan</a>
+							<a href="/formPelatihan" class="btn btn-warning btn-sm">Daftar Pelatihan</a>
 							<div>
 								<a href="/login" >Login Admin</a> |
 								<a href="/report" >Report</a>
@@ -41,8 +43,8 @@
 
 					</div>
 					<div class="right">
-						
-						
+
+
 					</div>
 					<div class="clearfix"></div>
 				</div>

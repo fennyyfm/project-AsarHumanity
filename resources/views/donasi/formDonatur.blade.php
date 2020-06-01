@@ -26,21 +26,21 @@
 <form action="/add" method="POST">
     @csrf
     <fieldset>
-        <legend>FORM DONASI</legend>
+        <legend>FORM Donatur</legend>
         <hr>
         <div class="col-lg-5">
-            <div class="form-group">
-                <label>Nama Donatur</label>
-                <input type="text" name="nama_donatur" class="form-control">
-            </div>
-            <div class="form-group">
-                <label>Nomor HP</label>
-                <input type="text" name="kontak_donatur" class="form-control">
-            </div>
-            <div class="form-group">
-                <label>Jumlah</label>
-                <input type="number" name="jumlah" class="form-control">
-            </div>
+          <div class="form-group">
+              <label>Nama Donatur</label>
+              <input type="text" name="nama_donatur" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Nomor HP</label>
+              <input type="text" name="kontak_donatur" class="form-control">
+          </div>
+          <div class="form-group">
+              <label>Jumlah</label>
+              <input type="number" name="jumlah" class="form-control">
+          </div>
             <div class="form-group">
                 <input type="submit" value="submit" class="btn btn-dark">
             </div>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Penerima;
-use \App\Distribusi;
 use \App\Barang;
 
 
@@ -14,7 +13,7 @@ class PenerimaController extends Controller
     	if($request->has('cari')){
     		$data_penerima = Penerima::where('nama_penerima','LIKE', '%' .$request->cari. '%')->get();
     	}else{
-    		$data_penerima = Penerima::all();
+        $data_penerima = Penerima::all();
     	}
     	return view('penerima.index',['data_penerima' => $data_penerima]);
     }
@@ -53,24 +52,5 @@ class PenerimaController extends Controller
         $jenis = Barang::orderBy('jenis_barang')->get();
 
     	return view('penerima/pilih',['penerima'=>$penerima], ['jenis' => $jenis]);
-    }
-
-    public function kirim($id){
-        $distribusi = new Distribusi();
-
-        $distribusi->tgl_distribusi = date('Y-m-d');
-        $distribusi->id_penerima = $id;
-        $distribusi->id_jenis = request('jenis');
-        $distribusi->jumlah_distribusi = request('jumlah');
-
-        $distribusi->save();
-
-    	  $data = Penerima::where('id', $id)->get();
-        Penerima::where('id', $id)->update(['jumlah_menerima' => ($data[0]->jumlah_menerima + request('jumlah'))]);
-
-        $jenis = Barang::where('id', request('jenis'))->get();
-		    Barang::where('id', request('jenis'))->update(['jumlah_barang' => ($jenis[0]->jumlah_barang - request('jumlah'))]);
-
-        return redirect('/rekomendasi')->with('sukses', 'Data berhasil diupdate');
     }
 }

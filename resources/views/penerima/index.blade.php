@@ -13,7 +13,6 @@
 	<table class="table table-hover">
 		<tr>
 			<th>Nama Penerima</th>
-			<th>Alamat</th>
 			<th>Kota</th>
 			<th>Provinsi</th>
 			<th>Jumlah Menerima</th>
@@ -22,7 +21,6 @@
 		@foreach($data_penerima as $penerima)
 		<tr>
 			<td>{{$penerima->nama_penerima}}</td>
-			<td>{{$penerima->alamat}}</td>
 			<td>{{$penerima->kota}}</td>
 			<td>{{$penerima->provinsi}}</td>
 			<td>{{$penerima->jumlah_menerima}}</td>

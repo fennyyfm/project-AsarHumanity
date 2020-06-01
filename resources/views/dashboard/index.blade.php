@@ -33,7 +33,7 @@
                         </p>
                     </div></a>
                 </div>
-                <div class="col-md-4">
+                <!--<div class="col-md-4">
                     <div class="metric">
                         <a href="/riwayatDonasi"><span class="icon"><i class="lnr lnr-history"></i></span>
                         <p>
@@ -41,13 +41,31 @@
                             <span class="title">Riwayat Donasi</span>
                         </p></a>
                     </div>
-                </div>
+                </div>!-->
                 <div class="col-md-4">
                     <div class="metric">
                         <a href="/rekomendasi"><span class="icon"><i class="lnr lnr-bullhorn"></i></span>
                         <p>
                             <span class="number">{{$data['rekomendasi']}}</span>
                             <span class="title">Rekomendasi</span>
+                        </p></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric">
+                        <a href="/listRelawan"><span class="icon"><i class="lnr lnr-bullhorn"></i></span>
+                        <p>
+                            <span class="number">{{$data['relawan']}}</span>
+                            <span class="title">Relawan</span>
+                        </p></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric">
+                        <a href="/listPelatihan"><span class="icon"><i class="lnr lnr-bullhorn"></i></span>
+                        <p>
+                            <span class="number">{{$data['pelatihan']}}</span>
+                            <span class="title">Pelatihan</span>
                         </p></a>
                     </div>
                 </div>

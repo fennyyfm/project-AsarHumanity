@@ -13,7 +13,7 @@ class DonaturController extends Controller
     }
 
     public function formDonatur(){
-        return view('donatur.formDonatur');
+        return view('donasi.formDonatur');
     }
 
     public function addDonatur(){
