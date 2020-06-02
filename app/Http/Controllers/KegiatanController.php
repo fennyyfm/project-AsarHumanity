@@ -9,9 +9,9 @@ class KegiatanController extends Controller
 {
   public function index()
   {
+    $kegiatan = Kegiatan::orderBy('tgl_kegiatan')->get();
 
-
-    return 0;
+    return view('kegiatan.reportKegiatan', ['kegiatan' => $kegiatan]);
   }
 
   public function formKegiatan()
@@ -21,7 +21,7 @@ class KegiatanController extends Controller
 
   public function tambahKegiatan()
   {
-    $target_dir = resource_path('views/kegiatan/image/');
+    $target_dir = storage_path('app/images/');
     $fileName = basename($_FILES["fileToUpload"]["name"]);
     $target_file = $target_dir . $fileName;
     $uploadOk = 1;

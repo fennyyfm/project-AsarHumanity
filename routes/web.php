@@ -33,6 +33,8 @@ Route::get('/report', 'DistribusiController@index');
 Route::get('/detailReport/{tgl}', 'DistribusiController@detailReportTanggal');
 Route::get('/detailReport/{jenis}', 'DistribusiController@detailReportJenis');
 
+Route::get('/reportKegiatan', 'KegiatanController@index');
+
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/dashboard','DashboardController@index');
 	Route::get('/penerima','PenerimaController@index');
@@ -42,7 +44,6 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/penerima/{id}/delete', 'PenerimaController@delete');
 	Route::get('/rekomendasi', 'PenerimaController@rekomendasi');
 	Route::get('/penerima/{id}/pilih', 'PenerimaController@pilih');
-
 	Route::post('/penerima/{id}/kirim', 'DistribusiController@kirim');
 
 	Route::get('/konfirmasiDonasi', 'DonaturController@konfirmasiDonasi');
