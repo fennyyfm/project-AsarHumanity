@@ -39,6 +39,8 @@
                                             <th>Lokasi</th>
                                             <th>Waktu</th>
                                             <th>Foto</th>
+                                            <th>Jumlah Penerima</th>
+                                            <th>Keterangan</th>
                                         </tr>
                                         @foreach($kegiatan as $key)
                                             <tr>
@@ -48,6 +50,8 @@
                                                 <td>{{ $key->lokasi_kegiatan }}</td>
                                                 <td>{{ $key->waktu_kegiatan }}</td>
                                                 <td><img src="<?php echo asset('images/'.$key->image) ?>" alt="foto" style="width:500px; height:300px"></td>
+                                                <td>{{ $key->count }}</td>
+                                                <td>{{ $key->keterangan }}</td>
                                             </tr>
                                         @endforeach
                                     </table>

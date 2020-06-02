@@ -9,7 +9,12 @@ class KegiatanController extends Controller
 {
   public function index()
   {
-    $kegiatan = Kegiatan::orderBy('tgl_kegiatan')->get();
+    $kegiatan = Kegiatan::join('distribusi', 'kegiatan.tgl_kegiatan', '=', 'distribusi.tgl_distribusi')
+                        ->select('kegiatan.tgl_kegiatan', 'kegiatan.nama_kegiatan', 'kegiatan.waktu_kegiatan', 'kegiatan.lokasi_kegiatan', 'kegiatan.waktu_kegiatan', 'kegiatan.image', 'kegiatan.keterangan')
+                        ->selectRaw('COUNT(distribusi.id) as count')
+                        ->groupBy('distribusi.tgl_distribusi', 'kegiatan.tgl_kegiatan', 'kegiatan.nama_kegiatan', 'kegiatan.waktu_kegiatan', 'kegiatan.lokasi_kegiatan', 'kegiatan.waktu_kegiatan', 'kegiatan.image', 'kegiatan.keterangan')
+                        ->orderBy('distribusi.tgl_distribusi', 'desc')
+                        ->get();
 
     return view('kegiatan.reportKegiatan', ['kegiatan' => $kegiatan]);
   }

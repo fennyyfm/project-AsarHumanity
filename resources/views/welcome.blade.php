@@ -36,6 +36,7 @@
 							<br>
 							<br>
 							<a href="/formAbsensiRelawan" class="btn btn-warning btn-sm">Absensi Relawan</a>
+							<a href="/reportKegiatan" class="btn btn-warning btn-sm">Agenda</a>
 							<div>
 								<a href="/login" >Login Admin</a> |
 								<a href="/report" >Report</a>
