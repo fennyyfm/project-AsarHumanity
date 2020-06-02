@@ -21,7 +21,7 @@ class KegiatanController extends Controller
 
   public function tambahKegiatan()
   {
-    $target_dir = storage_path('app/images/');
+    $target_dir = public_path('images/');
     $fileName = basename($_FILES["fileToUpload"]["name"]);
     $target_file = $target_dir . $fileName;
     $uploadOk = 1;
