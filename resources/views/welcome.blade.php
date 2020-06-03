@@ -67,7 +67,7 @@
         <img src="<?php echo asset('admin/assets/asar/logo-asar-humanity2-1-300x300.png') ?>" width="200" alt="" loading="lazy" align='right'>
       </div>
       <div class="col-sm-6">
-        <br>
+        <br><br>
         <h1>Asar Humanity</h1>
         <p>Tebar Energi Kebaikan, Raih Lipatan Pahala</p>
         <center>
