@@ -43,15 +43,15 @@
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/formDonasi">Donasi</a>
+          <a class="nav-link" href="#">Donasi</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Relawan
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/formRelawan">Daftar</a>
-            <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="#">Daftar</a>
+            <a class="dropdown-item" href="#">Login</a>
           </div>
         </li>
         <li class="nav-item">
@@ -71,8 +71,8 @@
         <h1>Asar Humanity</h1>
         <p>Tebar Energi Kebaikan, Raih Lipatan Pahala</p>
         <center>
-          <a href="/reportKegiatan" class="btn btn-success" style="border-radius:50px">Kegiatan</a>
-          <a href="/report" class="btn btn-success" style="border-radius:50px">Report <i class='fas fa-angle-double-right'></i></a>
+          <button class="btn btn-success" type="button" name="button" style="border-radius:50px">Kegiatan</button>
+          <button class="btn btn-success" type="button" name="button" style="border-radius:50px">Report <i class='fas fa-angle-double-right'></i></button>
         </center>
       </div>
     </div>

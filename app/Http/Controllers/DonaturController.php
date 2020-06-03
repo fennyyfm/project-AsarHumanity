@@ -18,8 +18,8 @@ class DonaturController extends Controller
       return view('welcome', [ 'data' => $data ] );
     }
 
-    public function formDonatur(){
-        return view('donasi.formDonatur');
+    public function formDonasi(){
+        return view('donasi.formDonasi');
     }
 
     public function addDonatur(){

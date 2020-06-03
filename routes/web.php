@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/coba', function (){
+	return view('coba');
+});
+
 Route::get('/login', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout','AuthController@logout');
 
 Route::get('/', 'DonaturController@index');
-Route::get('/formDonatur', 'DonaturController@formDonatur');
+Route::get('/formDonasi', 'DonaturController@formDonasi');
 Route::post('/add', 'DonaturController@addDonatur');
 
 Route::get('/formRelawan', 'RelawanController@formRelawan');
