@@ -29,7 +29,7 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="/">
       <img src="<?php echo asset('admin/logo-asar.jpg') ?>" width="100" alt="" loading="lazy">
     </a>
@@ -61,7 +61,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container" style="margin-top:100px">
     <div class="row">
       <div class="col-sm-6">
         <img src="<?php echo asset('admin/assets/asar/logo-asar-humanity2-1-300x300.png') ?>" width="200" alt="" loading="lazy" align='right'>
@@ -77,7 +77,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid" style="margin-top:150px">
+  <div class="container-fluid" style="margin-top:100px">
     <div class="card-deck">
       <div class="card">
         <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-sembako-1.png') ?>" height="200" alt="" loading="lazy">
@@ -141,9 +141,14 @@
       </div>
     </div>
   </div>
-  <div class="container" style="margin-top:300px">
-    <center><h3>Asar Humanity mengajak kamu semua, untuk ambil peran dan memberikan manfaat untuk sesama.</h3></center>
+  <div class="container" style="margin-top:250px">
+    <center><h3>Asar Humanity mengajak kamu semua, untuk ambil peran dan memberikan manfaat untuk sesama</h3></center>
   </div>
 
 </body>
+<footer>
+  <nav class="navbar navbar-light bg-light">
+    <p class="copyright"><center>&copy; Asar Humanity 2020</center></p>
+  </nav>
+</footer>
 </html>
