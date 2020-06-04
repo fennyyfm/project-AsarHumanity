@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Asar Humanity | Pendaftaran Relawan</title>
+  <title>Asar Humanity | Login</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -45,4 +45,11 @@
 		    </center>
 		  </div>
 </body>
+<footer>
+  <nav class="nav" style="margin-top:100px">
+    <div class="container-fluid">
+      <p class="copyright"><center>&copy; Asar Humanity 2020</center></p>
+    </div>
+  </nav>
+</footer>
 </html>
