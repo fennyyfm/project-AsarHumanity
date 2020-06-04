@@ -45,50 +45,53 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="/about">About Us</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid" style="margin-top:100px">
-    <center>
-      <div class="col-sm-3">
-        <div class="jumbotron" style="background-color: white">
-          <form action="/addRelawan" method="POST">
-            @csrf
-            <fieldset>
-              <legend>Formulir Pendaftaran Relawan</legend>
-              <hr>
-              <div class="form-group">
-                <label>Nama Lengkap</label>
-                <input type="text" name="nama_relawan" class="form-control" placeholder="Nama Lengkap">
-              </div>
-              <div class="form-group">
-                <label>Nomor HP</label>
-                <input type="text" name="kontak_relawan" class="form-control" placeholder="Nomor HP">
-              </div>
-              <div class="form-group">
-    						<label for="alamat">Alamat</label>
-    					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px">Alamat</textarea>
-    					</div>
-    					<div class="form-group">
-  					   	<label for="kota">Kota</label>
-  					    <input type="text" class="form-control" name ="kota" placeholder="Kota">
-    					</div>
-    					<div class="form-group">
-  					   	<label for="provinsi">Provinsi</label>
-  					    <input type="text" class="form-control" name ="provinsi" placeholder="Provinsi">
-    					</div>
-              <br>
-              <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px">
-              </div>
-            </fieldset>
-          </form>
-        </div>
+    <div class="row">
+      <div class="col-sm-6" style="margin-top:50px;margin-left:200px">
+        <h3>Syarat & Ketentuan</h3>
+        <ol style="font-size:25px">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
       </div>
-    </center>
+        <div class="col-sm-3">
+          <div class="jumbotron" style="background-color: white">
+            <form action="/addRelawan" method="POST">
+              @csrf
+              <fieldset>
+                <legend>Formulir Pendaftaran Relawan</legend>
+                <hr>
+                <div class="form-group">
+                  <input type="text" name="nama_relawan" class="form-control" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="kontak_relawan" class="form-control" placeholder="Nomor HP" required>
+                </div>
+                <div class="form-group">
+      					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px" required>Alamat</textarea>
+      					</div>
+      					<div class="form-group">
+    					    <input type="text" class="form-control" name ="kota" placeholder="Kota" required>
+      					</div>
+      					<div class="form-group">
+    					    <input type="text" class="form-control" name ="provinsi" placeholder="Provinsi" required>
+      					</div>
+                <br>
+                <div class="form-group">
+                  <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px" required>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+    </div>
   </div>
 </body>
 <footer>
