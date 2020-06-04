@@ -1,7 +1,7 @@
 <?php $title=' | Pendaftaran Relawan'; ?>
 @extends('layouts.umum');
 
-@section('nav-home')
+@section('nav-style')
 <style>
   .form-control {
     border-radius: 50px;

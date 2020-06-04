@@ -1,37 +1,41 @@
-<!doctype html>
-<html lang="en" class="fullscreen-bg">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Login | Admin ASAR Humanity</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="{{asset('admin/assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('admin/assets/vendor/linearicons/style.css')}}">
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{{asset('admin/assets/css/main.css')}}">
-    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-    <link rel="stylesheet" href="{{asset('admin/assets/css/demo.css')}}">
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin/assets/img/favicon.png')}}">
+  <title>Asar Humanity | Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <style>
+    body {
+      background-image: url(<?php echo asset('admin/assets/asar/cb.png') ?>);
+    }
+    .table {
+      background-color: white;
+      table-layout: auto;
+      margin-top: 25px;
+      margin-bottom: 50px;
+    }
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
 </head>
-
 <body>
-<div class="main">
+<div class="main" style="margin-top:100px">
         <div class="main-content">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3>Detail Report</h3>
-                                <table class="table table-hover">
-                                    <tr>
+                              <center><h3>Detail Report</h3></center>
+                                <table class="table table-hover center">
+                                    <tr class="table-success">
                                         <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Kota Penerima</th>
@@ -48,7 +52,7 @@
                                         </tr>
                                     @endforeach
                                 </table>
-                                <center><button class='btn btn-dark'><a href="/report">Kembali</a></button></center>
+                                <center><a class="btn btn-success" href="/report" role="button" style="border-radius:50px">Kembali</a></center>
                             </div>
                         </div>
                     </div>
@@ -57,4 +61,11 @@
         </div>
     </div>
 </body>
+<footer>
+  <nav class="nav" style="margin-top:100px">
+    <div class="container-fluid">
+      <p class="copyright"><center>&copy; Asar Humanity 2020</center></p>
+    </div>
+  </nav>
+</footer>
 </html>
