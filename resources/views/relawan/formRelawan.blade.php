@@ -1,14 +1,6 @@
 <?php $title=' | Pendaftaran Relawan'; ?>
 @extends('layouts.umum');
 
-@section('nav-style')
-<style>
-  .form-control {
-    border-radius: 50px;
-  }
-</style>
-@endsection
-
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection
 @section('nav-relawan') <li class="nav-item active"> @endsection
@@ -19,7 +11,7 @@
 @section('content')
 <div class="container-fluid" style="margin-top:100px">
   <div class="row">
-    <div class="col-sm-6" style="margin-top:50px;margin-left:200px">
+    <div class="col-sm-6" style="margin: 1% 10% 10% 10%">
       <h3>Syarat & Ketentuan</h3>
       <ol style="font-size:25px">
         <li></li>
@@ -35,23 +27,23 @@
               <legend>Formulir Pendaftaran Relawan</legend>
               <hr>
               <div class="form-group">
-                <input type="text" name="nama_relawan" class="form-control" placeholder="Nama Lengkap" required>
+                <input type="text" name="nama_relawan" class="form-control" placeholder="Nama Lengkap" style="border-radius:50px" required>
               </div>
               <div class="form-group">
-                <input type="text" name="kontak_relawan" class="form-control" placeholder="Nomor HP" required>
+                <input type="text" name="kontak_relawan" class="form-control" placeholder="Nomor HP" style="border-radius:50px" required>
               </div>
               <div class="form-group">
-    					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px" required>Alamat</textarea>
+    					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px" placeholder="Alamat" required></textarea>
     					</div>
     					<div class="form-group">
-  					    <input type="text" class="form-control" name ="kota" placeholder="Kota" required>
+  					    <input type="text" class="form-control" name ="kota" placeholder="Kota" style="border-radius:50px" required>
     					</div>
     					<div class="form-group">
-  					    <input type="text" class="form-control" name ="provinsi" placeholder="Provinsi" required>
+  					    <input type="text" class="form-control" name ="provinsi" placeholder="Provinsi" style="border-radius:50px" required>
     					</div>
               <br>
               <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px" required>
+                <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px">
               </div>
             </fieldset>
           </form>
