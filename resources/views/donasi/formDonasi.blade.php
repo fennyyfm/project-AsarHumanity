@@ -10,11 +10,11 @@
 @endsection
 
 @section('nav-home') <li class="nav-item"> @endsection
-@section('nav-donasi') <li class="nav-item"> @endsection
+@section('nav-donasi') <li class="nav-item active"> @endsection
 @section('nav-relawan') <li class="nav-item"> @endsection
 @section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
-@section('nav-about') <li class="nav-item active"> @endsection
+@section('nav-about') <li class="nav-item"> @endsection
 
 @section('content')
 <div class="container" style="margin-top:100px">
