@@ -14,7 +14,7 @@
       background-image: url(<?php echo asset('admin/assets/asar/cb.png') ?>);
     }
   </style>
-	@yield('style');
+	@yield('style')
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">

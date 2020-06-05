@@ -9,13 +9,15 @@
   }
   .btn {
     border-radius:50px;
+    color:white;
+    background-color:#E3A425;
   }
 </style>
 @endsection
 
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection
-@section('nav-relawan') <li class="nav-item"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown"> @endsection
 @section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
 @section('nav-about') <li class="nav-item"> @endsection
@@ -30,7 +32,7 @@
             <div class="panel-heading">
               <h3 class="panel-title">Report</h3>
                 <div class="col-md-3" style="margin-bottom:50px;margin-top:10px;">
-                  <select  id='kategori' class="form-control" name="laporan" onchange="return showReport();" style="border-radius:50px">
+                  <select  id='kategori' class="form-control" name="laporan" onchange="return showReport();" style="border-radius:50px;border-color:#E3A425;">
                     <option value="">- Pilih Kategori Report -</option>
                     <option value="tanggal">Berdasarkan Tanggal</option>
                     <option value="jenis">Berdasarkan Jenis</option>
@@ -38,7 +40,7 @@
                 </div>
                 <div id='tgl'>
                   <table class="table table-hover">
-                    <thead class="table-success">
+                    <thead class="table-warning">
                       <tr>
                         <th>No</th>
                         <th>Tanggal</th>
@@ -52,7 +54,7 @@
                         <td>{{ $key->tgl_distribusi }}</td>
                         <td>{{ $key->count }}</td>
                         <td>
-                          <a class="btn btn-success" href="/detailReport/{{ $key->tgl_distribusi }}" role="button">Lihat Detail</a>
+                          <a class="btn" href="/detailReport/{{ $key->tgl_distribusi }}" role="button">Lihat Detail</a>
                         </td>
                       </tr>
                     @endforeach

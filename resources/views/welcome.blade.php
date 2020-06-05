@@ -16,12 +16,21 @@
     border-radius: 50%;
     width: 80%;
   }
+  .b {
+    border-radius:50px;
+    color:white;
+    background-color:#E3A425;
+  }
+  .card {
+    min-width: 250px;
+    margin-top: 10px;
+  }
 </style>
 @endsection
 
 @section('nav-home') <li class="nav-item active"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection
-@section('nav-relawan') <li class="nav-item"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown"> @endsection
 @section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
 @section('nav-about') <li class="nav-item"> @endsection
@@ -31,16 +40,16 @@
   <div class="row">
     <div class="col-sm-6"></div>
     <div class="col-sm-6">
-      <div class="row">
-        <div class="col-sm-3">
-          <img src="<?php echo asset('admin/logoasar.png') ?>" width="200" alt="" loading="lazy" align='center'>
+      <div class="row" style="margin-left:20px">
+        <div class="col-sm-5.5">
+          <img src="<?php echo asset('admin/logoasar.png') ?>" alt="" loading="lazy" align='center' style="width:100%; max-width:200px;">
         </div>
-        <div class="col-sm-6" style="margin-top:25px">
+        <div class="col-sm-6.5" style="margin-top:15px">
           <h1>Asar Humanity</h1>
           <p>Tebar Energi Kebaikan, Raih Lipatan Pahala</p>
           <center>
-            <a href="/reportKegiatan" class="btn btn-success" style="border-radius:50px">Kegiatan</a>
-            <a href="/report" class="btn btn-success" style="border-radius:50px">Report <i class='fas fa-angle-double-right'></i></a>
+            <a href="/reportKegiatan" class="btn b">Kegiatan</a>
+            <a href="/report" class="btn b">Report <i class='fas fa-angle-double-right'></i></a>
           </center>
         </div>
       </div>

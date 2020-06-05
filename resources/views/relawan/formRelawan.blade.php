@@ -1,9 +1,22 @@
 <?php $title=' | Pendaftaran Relawan'; ?>
 @extends('layouts.umum');
 
+@section('style')
+<style>
+  .btn {
+    border-radius:50px;
+    color:white;
+    background-color:#E3A425;
+  }
+  .form-control {
+    border-color:#E3A425;
+  }
+</style>
+@endsection
+
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection
-@section('nav-relawan') <li class="nav-item active"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown active"> @endsection
 @section('nav-daftar') <a class="dropdown-item active" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
 @section('nav-about') <li class="nav-item"> @endsection
@@ -46,7 +59,7 @@
               </div>
               <br>
               <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px">
+                <input type="submit" value="submit" class="btn btn-block">
               </div>
             </fieldset>
           </form>

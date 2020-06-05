@@ -18,7 +18,12 @@
 </style>
 @endsection
 
-
+@section('nav-home') <li class="nav-item"> @endsection
+@section('nav-donasi') <li class="nav-item"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown"> @endsection
+@section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
+@section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
+@section('nav-about') <li class="nav-item"> @endsection
 
 @section('content')
 <div class="main" style="margin-top:100px">
@@ -31,7 +36,7 @@
               <center><h3 class="panel-title">Report</h3></center>
               <div style="margin-top:25px">
                 <table class="table table-responsive-sm table-hover center">
-                  <tr class="table-success">
+                  <tr class="table-warning">
                     <th>No</th>
                     <th>Tanggal</th>
                     <th>Nama Kegiatan</th>

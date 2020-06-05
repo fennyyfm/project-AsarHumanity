@@ -4,9 +4,8 @@
   </div>
   <div class="col-sm-6" style="margin-top:25px">
     <center>
-      <h5>Alamat</h5>
-      <br>
-      <i class='fas fa-map-marker-alt' style='font-size:30px'></i>
+      <h5 style="margin-bottom:5px">Alamat</h5>
+      <a href="https://goo.gl/maps/fxT8FiRs7hdL6oSe8" class='btn fas fa-map-marker-alt' style='font-size:30px'></a>
       <p>Graha Asar : JL.Raya Tapos No.17A Tapos, Kota Depok,Jawa Barat</p>
     </center>
   </div>

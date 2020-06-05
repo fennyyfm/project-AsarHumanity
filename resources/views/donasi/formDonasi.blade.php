@@ -1,9 +1,22 @@
 <?php $title=' | Donasi'; ?>
 @extends('layouts.umum');
 
+@section('style')
+<style>
+  .btn {
+    border-radius:50px;
+    color:white;
+    background-color:#E3A425;
+  }
+  .form-control {
+    border-color:#E3A425;
+  }
+</style>
+@endsection
+
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item active"> @endsection
-@section('nav-relawan') <li class="nav-item"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown"> @endsection
 @section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
 @section('nav-about') <li class="nav-item"> @endsection
@@ -20,20 +33,20 @@
                     <legend>Formulir Donasi</legend>
                     <hr>
                       <div class="form-group">
-                        <input type="text" name="nama_donatur" class="form-control" placeholder="Nama Donatur" style="border-radius:50px" required>
+                        <input type="text" name="nama_donatur" class="form-control" placeholder="Nama Donatur" style="border-radius:50px;" required>
                       </div>
                       <div class="form-group">
-                        <input type="text" name="kontak_donatur" class="form-control" placeholder="Nomor HP" style="border-radius:50px" required>
+                        <input type="text" name="kontak_donatur" class="form-control" placeholder="Nomor HP" style="border-radius:50px;" required>
                       </div>
                       <div class="form-group">
-                        <input type="number" name="jumlah" class="form-control" placeholder="Jumlah Donasi" style="border-radius:50px" required>
+                        <input type="number" name="jumlah" class="form-control" placeholder="Jumlah Donasi" style="border-radius:50px;" required>
                       </div>
                       <div class="form-group">
-            					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px" placeholder="Do'a Khusus"></textarea>
+            					  <textarea class="form-control" name="alamat" rows="3" style="border-radius:25px;" placeholder="Do'a Khusus"></textarea>
             					</div>
                       <br>
                         <div class="form-group">
-                            <input type="submit" value="submit" class="btn btn-success btn-block" style="border-radius:50px">
+                            <input type="submit" value="submit" class="btn btn-block">
                         </div>
                 </fieldset>
             </form>
@@ -45,7 +58,7 @@
         <div class="col-sm-8">
 
             <h2>Sudah Donasi?</h2><br>
-            <button class="btn btn-success btn-block btn-lg" type="button" name="button" style="border-radius: 50px;max-width:250px">Konfirmasi Yuk!</button>
+            <button class="btn btn-block btn-lg" type="button" name="button" style="max-width:250px">Konfirmasi Yuk!</button>
         </div>
       </center>
     </div>

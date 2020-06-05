@@ -23,6 +23,11 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .btn {
+      border-radius:50px;
+      color:white;
+      background-color:#E3A425;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +40,7 @@
                             <div class="panel-heading">
                               <center><h3>Detail Report</h3></center>
                                 <table class="table table-hover center">
-                                    <tr class="table-success">
+                                    <tr class="table-warning">
                                         <th>No</th>
                                         <th>Tanggal</th>
                                         <th>Kota Penerima</th>
@@ -52,7 +57,7 @@
                                         </tr>
                                     @endforeach
                                 </table>
-                                <center><a class="btn btn-success" href="/report" role="button" style="border-radius:50px">Kembali</a></center>
+                                <center><a class="btn" href="/report" role="button" style="border-radius:50px;">Kembali</a></center>
                             </div>
                         </div>
                     </div>

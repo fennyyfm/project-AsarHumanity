@@ -3,7 +3,7 @@
 
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection
-@section('nav-relawan') <li class="nav-item"> @endsection
+@section('nav-relawan') <li class="nav-item dropdown"> @endsection
 @section('nav-daftar') <a class="dropdown-item" href="/formRelawan">Daftar</a> @endsection
 @section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
 @section('nav-about') <li class="nav-item active"> @endsection
