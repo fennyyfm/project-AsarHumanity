@@ -15,7 +15,7 @@
     <h3>Organisasi Non Profit Yang Bergerak Di Bidang Sosial, Kemanusiaan Dan Keagamaan</h3>
   </center>
 </div>
-<div class="container-fluid" style="margin-top:100px;margin-left:50px;margin-right:50px">
+<div class="container-fluid" style="margin-top:100px;">
   <div class="row">
     <div class="col-sm-6">
       <center>
