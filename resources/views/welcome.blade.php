@@ -62,7 +62,7 @@
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-sembako-1.png') ?>" alt="" loading="lazy">
       <div class="card-body">
         <h5 class="card-title">Berbagi Sembako</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Berbagi sembako untuk mereka yang masih harus bekerja di jalan ditengah wabah covid-19, untuk mereka yang di rumah dengan segala keterbatasannya.</p>
       </div>
       <div class="card-footer">
         <a href="#">read more <i class='fas fa-angle-double-right'></i></a>
@@ -72,7 +72,7 @@
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-makanan.png') ?>" alt="" loading="lazy">
       <div class="card-body">
         <h5 class="card-title">Berbagi Makanan</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Berbagi makanan untuk mereka yang membutuhkan. Berikan kebahagiaan untuk mereka yang tidak #dirumahaja</p>
       </div>
       <div class="card-footer">
         <a href="#">read more <i class='fas fa-angle-double-right'></i></a>
