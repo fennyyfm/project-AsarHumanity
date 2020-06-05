@@ -52,7 +52,7 @@
 	@yield('content')
 </body>
 <footer>
-  <nav class="nav" style="margin-top:100px">
+  <nav class="nav">
     <div class="container-fluid">
       @yield('contact')
       <p class="copyright"><center>&copy; Asar Humanity 2020</center></p>

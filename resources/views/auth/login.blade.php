@@ -21,7 +21,7 @@
 <body>
   <div class="container-fluid" style="margin-top:100px">
     <center>
-      <div class="col-sm-3">
+      <div class="col-sm-6" style="max-width:400px;">
         <div class="jumbotron" style="background-color: white">
 							<form class="form-auth-small" action="/postlogin" method="POST">
 								{{csrf_field()}}

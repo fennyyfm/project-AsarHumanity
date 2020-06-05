@@ -9,7 +9,7 @@
 @section('nav-about') <li class="nav-item"> @endsection
 
 @section('content')
-<div class="container" style="margin-top:100px">
+<div class="container" style="margin-top:100px;margin-bottom:50px;">
   <div class="row">
     <div class="col-sm-6">
       <center>
