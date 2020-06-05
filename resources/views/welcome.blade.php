@@ -164,7 +164,7 @@ function drawChart() {
 @section('contact') @include('layouts.includes.contact') @endsection
 
 <div class="modal bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display:block;">
-  <div class="modal-dialog modal-lg" role="document" style="max-width:600px">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document" style="max-width:600px">
     <div class="modal-content">
       <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tutup()">
