@@ -23,6 +23,8 @@
       background-color:#E3A425;
     }
   </style>
+	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin/assets/img/favicon.png')}}">
 </head>
 <body>
   <div class="container-fluid" style="margin-top:100px">

@@ -1,5 +1,5 @@
 <?php $title=' | About Us'; ?>
-@extends('layouts.umum');
+@extends('layouts.umum')
 
 @section('nav-home') <li class="nav-item"> @endsection
 @section('nav-donasi') <li class="nav-item"> @endsection

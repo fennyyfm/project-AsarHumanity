@@ -1,5 +1,5 @@
 <?php $title=' | Report Kegiatan'; ?>
-@extends('layouts.umum');
+@extends('layouts.umum')
 
 @section('style')
 <style>

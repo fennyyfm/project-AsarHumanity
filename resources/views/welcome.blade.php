@@ -1,5 +1,5 @@
 <?php $title=' | home'; ?>
-@extends('layouts.umum');
+@extends('layouts.umum')
 
 @section('style')
 <style>
@@ -23,6 +23,7 @@
   }
   .card {
     min-width: 250px;
+    max-width: 300px;
     margin-top: 10px;
   }
 </style>
@@ -57,10 +58,10 @@
   </div>
 </div>
 <div class="container-fluid" style="margin-top:100px">
-  <div class="card-deck">
+  <div class="card-deck justify-content-center">
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-sembako-1.png') ?>" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Berbagi Sembako</h5>
         <p class="card-text">Berbagi sembako untuk mereka yang masih harus bekerja di jalan ditengah wabah covid-19, untuk mereka yang di rumah dengan segala keterbatasannya.</p>
       </div>
@@ -70,7 +71,7 @@
     </div>
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-makanan.png') ?>" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Berbagi Makanan</h5>
         <p class="card-text">Berbagi makanan untuk mereka yang membutuhkan. Berikan kebahagiaan untuk mereka yang tidak #dirumahaja</p>
       </div>
@@ -80,7 +81,7 @@
     </div>
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/zakat-Fitrah.png') ?>" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Zakat Fitrah</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
@@ -90,7 +91,7 @@
     </div>
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/zakat-mal.png') ?>" width="100" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Zakat Maal</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
@@ -100,7 +101,7 @@
     </div>
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/ambulan-asar.png') ?>" width="100" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Ambulan Gratis</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
@@ -110,7 +111,7 @@
     </div>
     <div class="card">
       <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-dunia-islam-1.png') ?>" width="100" alt="" loading="lazy">
-      <div class="card-body">
+      <div class="card-body text-center">
         <h5 class="card-title">Infaq Dunia Islam</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       </div>
@@ -120,18 +121,18 @@
     </div>
   </div>
 </div>
-<div class="container" style="margin-top:350px">
+<div class="container" style="margin-top:300px">
   <center><h3>Asar Humanity mengajak kamu semua, untuk ambil peran dan memberikan manfaat untuk sesama</h3></center>
 </div>
-<div class="container-fluid" style="margin-top:300px;margin-bottom:50px">
+<div class="container-fluid" style="margin-top:250px;margin-bottom:50px">
   <div class="row">
-    <div class="col-sm-4" style="margin-bottom:10px">
+    <div class="col-sm-4" style="margin-bottom:50px">
       <center><img src="<?php echo asset('admin/assets/asar/BERBAGI-MAKAN-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
-    <div class="col-sm-4" style="margin-bottom:10px">
+    <div class="col-sm-4" style="margin-bottom:50px">
       <center><img src="<?php echo asset('admin/assets/asar/MAKAN3-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
-    <div class="col-sm-4" style="margin-bottom:10px">
+    <div class="col-sm-4" style="margin-bottom:50px">
       <center><img src="<?php echo asset('admin/assets/asar/MAKAN4-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
   </div>

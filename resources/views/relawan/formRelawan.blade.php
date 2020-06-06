@@ -1,5 +1,5 @@
 <?php $title=' | Pendaftaran Relawan'; ?>
-@extends('layouts.umum');
+@extends('layouts.umum')
 
 @section('style')
 <style>
@@ -59,7 +59,7 @@
               </div>
               <br>
               <div class="form-group">
-                <input type="submit" value="submit" class="btn btn-block">
+                <input type="submit" value="Submit" class="btn btn-block">
               </div>
             </fieldset>
           </form>
