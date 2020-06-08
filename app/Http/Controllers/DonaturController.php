@@ -9,10 +9,10 @@ use App\Barang;
 class DonaturController extends Controller
 {
     public function index(){
-      $data = Donatur::select('tgl_konfirmasi')
+      $data = Donatur::selectRaw('MONTHNAME(tgl_konfirmasi) as month')
                       ->selectRaw('COUNT(id) as count')
                       ->where('status', 'sudah konfirmasi')
-                      ->groupBy('tgl_konfirmasi')
+                      ->groupBy('month')
                       ->get();
 
       return view('welcome', [ 'data' => $data ] );

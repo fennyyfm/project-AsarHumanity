@@ -37,7 +37,7 @@
 @section('nav-about') <li class="nav-item"> @endsection
 
 @section('content')
-<div class="container-fluid" style="margin-top:50px" data-toggle="modal" data-target=".bd-example-modal-lg">
+<div class="container-fluid" style="margin-top:50px" data-toggle="modal" data-target="exampleModal">
   <div class="row">
     <div class="col-sm-6"></div>
     <div class="col-sm-6">
@@ -148,15 +148,15 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-		['Tanggal Konfirmasi', 'Donatur'],
+		['Bulan', 'Donatur'],
 		@foreach($data as $key)
-			@php echo '["'.$key->tgl_konfirmasi.'",'.$key->count.'],';
+			@php echo '["'.$key->month.'",'.$key->count.'],';
       @endphp
       @endforeach
 	]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Grafik Donasi Harian', 'width':550, 'height':400};
+  var options = {'width':450, 'height':300};
 
   // Display the chart inside the <div> element with id="piechart"
   var chart = new google.visualization.LineChart(document.getElementById('piechart'));
@@ -173,10 +173,11 @@ function drawChart() {
 
 @section('contact') @include('layouts.includes.contact') @endsection
 
-<div class="modal bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display:block;">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document" style="max-width:600px">
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display:block;">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
     <div class="modal-content">
       <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Grafik Donasi Per Bulan</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="tutup()">
 					<span aria-hidden="true">&times;</span>
 				</button>

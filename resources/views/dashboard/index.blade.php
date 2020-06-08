@@ -1,3 +1,4 @@
+<?php $title = ' | Dashboard'; ?>
 @extends('layouts.master')
 
 @section('content')
