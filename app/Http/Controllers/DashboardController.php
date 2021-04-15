@@ -8,10 +8,8 @@ class DashboardController extends Controller
 {
     public function index(){
     	$data['penerima'] = \App\Penerima::count();
-      $uang = \App\Barang::select('jumlah_barang')->where('id', 1)->get();
-      $data['uang'] = $uang[0]->jumlah_barang;
-      $barang = intval(\App\Barang::sum('jumlah_barang'));
-      $data['barang'] = $barang - $uang[0]->jumlah_barang;
+      $data['uang'] = \App\Kategori::sum('jumlah_uang');
+      $data['barang'] = \App\Barang::sum('jumlah_barang');
       $data['konfirmasi'] = \App\Donatur::where('status', 'menunggu konfirmasi')->count();
       $data['riwayat_donasi'] = \App\Donatur::count();
       $min = \App\Penerima::selectRaw('min(jumlah_menerima) as min')->get();

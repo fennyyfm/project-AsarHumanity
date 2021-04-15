@@ -2,7 +2,8 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav" id="side">
-						<li><a href="/dashboard" class="bar active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/dashboard" class="bar"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="/dataQurban" class="bar"><i class="lnr lnr-download"></i> <span>Qurban</span></a></li>
 						<li><a href="/penerima" class="bar"><i class="lnr lnr-download"></i> <span>Penerima</span></a></li>
 						<li><a href="/listBarang" class="bar"><i class="fa fa-shopping-bag"></i> <span>Barang</span></a></li>
 						<!--<li><a href="/konfirmasiDonasi" class="bar"><i class="lnr lnr-star"></i> <span>Konfirmasi Donasi</span></a></li>!-->

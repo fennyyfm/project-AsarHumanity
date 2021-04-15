@@ -26,6 +26,15 @@
     max-width: 300px;
     margin-top: 10px;
   }
+  .jumbotron {
+    background-color: #E3A425;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+  }
+  .j {
+      min-width:150px;
+  }
 </style>
 @endsection
 
@@ -43,7 +52,7 @@
     <div class="col-sm-6">
       <div class="row" style="margin-left:20px">
         <div class="col-sm-5.5">
-          <img src="<?php echo asset('admin/logoasar.png') ?>" alt="" loading="lazy" align='center' style="width:100%; max-width:200px;">
+          <img src="<?php echo asset('assets/logoasar.png') ?>" alt="" loading="lazy" align='center' style="width:100%; max-width:200px;">
         </div>
         <div class="col-sm-6.5" style="margin-top:15px">
           <h1>Asar Humanity</h1>
@@ -60,7 +69,7 @@
 <div class="container-fluid" style="margin-top:100px">
   <div class="card-deck justify-content-center">
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-sembako-1.png') ?>" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/donasi-sembako-1.png') ?>" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Berbagi Sembako</h5>
         <p class="card-text">Berbagi sembako untuk mereka yang masih harus bekerja di jalan ditengah wabah covid-19, untuk mereka yang di rumah dengan segala keterbatasannya.</p>
@@ -70,7 +79,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-makanan.png') ?>" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/donasi-makanan.png') ?>" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Berbagi Makanan</h5>
         <p class="card-text">Berbagi makanan untuk mereka yang membutuhkan. Berikan kebahagiaan untuk mereka yang tidak #dirumahaja</p>
@@ -80,7 +89,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/zakat-Fitrah.png') ?>" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/zakat-Fitrah.png') ?>" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Zakat Fitrah</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -90,7 +99,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/zakat-mal.png') ?>" width="100" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/zakat-mal.png') ?>" width="100" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Zakat Maal</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -100,7 +109,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/ambulan-asar.png') ?>" width="100" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/ambulan-asar.png') ?>" width="100" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Ambulan Gratis</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -110,7 +119,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="<?php echo asset('admin/assets/asar/donasi-dunia-islam-1.png') ?>" width="100" alt="" loading="lazy">
+      <img class="card-img-top" src="<?php echo asset('assets/asset/asar/donasi-dunia-islam-1.png') ?>" width="100" alt="" loading="lazy">
       <div class="card-body text-center">
         <h5 class="card-title">Infaq Dunia Islam</h5>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -127,14 +136,73 @@
 <div class="container-fluid" style="margin-top:250px;margin-bottom:50px">
   <div class="row">
     <div class="col-sm-4" style="margin-bottom:50px">
-      <center><img src="<?php echo asset('admin/assets/asar/BERBAGI-MAKAN-1024x682.jpg') ?>" alt="" class="pic"></center>
+      <center><img src="<?php echo asset('assets/asset/asar/BERBAGI-MAKAN-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
     <div class="col-sm-4" style="margin-bottom:50px">
-      <center><img src="<?php echo asset('admin/assets/asar/MAKAN3-1024x682.jpg') ?>" alt="" class="pic"></center>
+      <center><img src="<?php echo asset('assets/asset/asar/MAKAN3-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
     <div class="col-sm-4" style="margin-bottom:50px">
-      <center><img src="<?php echo asset('admin/assets/asar/MAKAN4-1024x682.jpg') ?>" alt="" class="pic"></center>
+      <center><img src="<?php echo asset('assets/asset/asar/MAKAN4-1024x682.jpg') ?>" alt="" class="pic"></center>
     </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center">
+      <div class="col-sm-2 j">
+          <div class="jumbotron">
+            <center>
+              <span class="icon"><i class="lnr lnr-download"></i></span>
+              <p>
+                  <span class="number">{{$data['penerima']}}</span>
+                  <span class="title">Penerima</span>
+              </p>
+            </center>
+          </div>
+      </div><!--
+      <div class="col-sm-2 j">
+          <div class="jumbotron">
+            <center>
+              <span class="icon"><i class="fa fa-shopping-bag"></i></span>
+              <p>
+                  <span class="number">{{$data['barang']}}</span>
+                  <span class="title">Barang</span>
+              </p>
+            </center>
+          </div>
+      </div>!-->
+      <div class="col-sm-2 j">
+          <div class="jumbotron">
+            <center>
+              <span class="icon"><i class="lnr lnr-history"></i></span>
+              <p>
+                  <span class="number">{{$data['riwayat_donasi']}}</span>
+                  <span class="title">Donatur</span>
+              </p>
+            </center>
+          </div>
+      </div>
+      <div class="col-sm-2 j">
+          <div class="jumbotron">
+            <center>
+              <span class="icon"><!--<i class="fa fa-users"></i>!--></span>
+              <p>
+                  <span class="number">{{$data['relawan']}}</span>
+                  <span class="title">Relawan</span>
+              </p>
+            </center>
+          </div>
+      </div>
+      <div class="col-sm-2 j">
+          <div class="jumbotron">
+            <center>
+              <span class="icon"><i class="fa fa-group"></i></span>
+              <p>
+                  <span class="number">{{$data['pelatihan']}}</span>
+                  <span class="title">Pelatihan</span>
+              </p>
+            </center>
+          </div>
+      </div>
   </div>
 </div>
 
@@ -149,7 +217,7 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
 		['Bulan', 'Donatur'],
-		@foreach($data as $key)
+		@foreach($data['donatur'] as $key)
 			@php echo '["'.$key->month.'",'.$key->count.'],';
       @endphp
       @endforeach

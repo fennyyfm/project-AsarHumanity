@@ -4,7 +4,8 @@
 
 <div class="panel-heading">
     <h3 class="panel-title">Riwayat Donasi</h3>
-
+</div>
+<div class="panel-body">
     <table class="table table-hover">
         <tr>
             <th>No</th>
@@ -20,9 +21,9 @@
                 <td>{{ $key->nama_donatur }}</td>
                 <td>{{ $key->status }}</td>
                 <td>
-                    <button type="button"class="btn btn-warning btn-sm"><a href="/detailDonatur/{{ $key->id }}">Lihat Detail</a></button>
+                    <a href="/detailDonatur/{{ $key->id }}" class="btn btn-warning">Lihat Detail</a>
                     @if ($key->status == 'menunggu konfirmasi')
-                        <button type="button" class="btn btn-success btn-sm"><a href="/updateStatus/{{ $key->id }}">Update Status</a></button>
+                        <a href="/updateStatus/{{ $key->id }}" class="btn btn-warning">Update Status</a>
                     @endif
                 </td>
             </tr>

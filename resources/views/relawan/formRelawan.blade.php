@@ -1,30 +1,10 @@
 <?php $title=' | Pendaftaran Relawan'; ?>
 @extends('layouts.umum')
 
-@section('style')
-<style>
-  .btn {
-    border-radius:50px;
-    color:white;
-    background-color:#E3A425;
-  }
-  .form-control {
-    border-color:#E3A425;
-  }
-</style>
-@endsection
-
-@section('nav-home') <li class="nav-item"> @endsection
-@section('nav-donasi') <li class="nav-item"> @endsection
-@section('nav-relawan') <li class="nav-item dropdown active"> @endsection
-@section('nav-daftar') <a class="dropdown-item active" href="/formRelawan">Daftar</a> @endsection
-@section('nav-login') <a class="dropdown-item" href="/login">Login</a> @endsection
-@section('nav-about') <li class="nav-item"> @endsection
-
 @section('content')
-<div class="container" style="margin-top:75px;">
+<div class="container" data-aos="fade-up">
   <div class="row">
-    <div class="col-sm-6" style="margin-bottom:50px;">
+    <div class="col-sm-6" style="margin-top:150px;">
       <center>
         <h3>Syarat & Ketentuan</h3>
         <ol style="font-size:25px">
@@ -36,12 +16,19 @@
     </div>
     <div class="col-sm-6">
       <center>
-        <div class="jumbotron" style="background-color: white;max-width:400px">
+        <div class="jumbotron" style="background-color: white;max-width:400px; margin-top:50px;">
           <form action="/addRelawan" method="POST">
             @csrf
             <fieldset>
               <legend>Formulir Pendaftaran Relawan</legend>
               <hr>
+              <div class="form-group">
+                <select name="kategori" class="form-control" style="border-radius:50px;" required>
+                  <option>-- Pilih Kategori --</option>
+                  <option value='relawan'>-- Relawan --</option>
+                  <option value='pelatihan'>-- Pelatihan --</option>
+                </select>
+              </div>
               <div class="form-group">
                 <input type="text" name="nama_relawan" class="form-control" placeholder="Nama Lengkap" style="border-radius:50px" required>
               </div>
@@ -59,7 +46,7 @@
               </div>
               <br>
               <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-block">
+                <input type="submit" value="Submit" class="btn btn-block btn-warning">
               </div>
             </fieldset>
           </form>

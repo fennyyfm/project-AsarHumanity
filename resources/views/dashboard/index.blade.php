@@ -4,7 +4,8 @@
 @section('content')
 
 <div class="panel-heading">
-    <h3 class="panel-title">Dashboard</h3>
+    <h2 class="panel-title">Dashboard</h2>
+</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-4">
@@ -20,7 +21,7 @@
                     <div class="metric">
                         <a href="/listBarang"><span class="icon"><i class="fa fa-money"></i></span>
                         <p>
-                            <span class="number">{{$data['uang']}}</span>
+                            <span class="number">Rp{{$data['uang']}}</span>
                             <span class="title">Uang</span>
                         </p></a>
                     </div>
@@ -82,6 +83,6 @@
             </div>
         </div>
     </div>
-</div>
+
 
 @endsection

@@ -27,7 +27,7 @@
 		</div>
 		<div class="form-group">
 			<label>Foto Kegiatan</label>
-			<input type="file" class="form-control" name ="fileToUpload" id ="fileToUpload">
+			<input type="file" name ="fileToUpload" id ="fileToUpload">
 		</div>
 		<div class="form-group">
 			<label>Keterangan</label>

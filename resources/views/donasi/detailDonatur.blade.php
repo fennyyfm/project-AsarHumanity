@@ -19,8 +19,8 @@
                 <td>{{ $donatur[0]->tgl_donasi }}</td>
             </tr>
             <tr>
-                <td>Jenis Donasi</td>
-                <td>{{ $donatur[0]->jenis_donasi }}</td>
+                <td>Kategori</td>
+                <td>{{ $donatur[0]->kategori }}</td>
             </tr>
             <tr>
                 <td>Jumlah</td>
@@ -37,9 +37,9 @@
               </tr>
             @endif
         </table>
-        <button class="btn btn-dark"><a href="/riwayatDonasi">Kembali</a></button>
+        <a href="/riwayatDonasi" class="btn btn-success">Kembali</a>
         @if ($donatur[0]->status == 'menunggu konfirmasi')
-            <button class="btn btn-dark"><a href="/updateStatus/{{ $donatur[0]->id }}">Update Status</a></button>
+            <a href="/updateStatus/{{ $donatur[0]->id }}" class="btn btn-warning">Update Status</a>
         @endif
     </div>
 </div>

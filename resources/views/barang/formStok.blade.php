@@ -23,7 +23,7 @@
                     </tr>
                 </table>
                 <div class="form-group">
-                    <input type="submit" value="submit" class="btn btn-dark">
+                    <input type="submit" value="submit" class="btn btn-warning">
                 </div>
             </div>
         </fieldset>

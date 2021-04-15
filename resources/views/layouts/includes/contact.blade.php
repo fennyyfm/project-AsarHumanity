@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-3" align='center'>
-    <img src="<?php echo asset('admin/logoasar.png') ?>" width="150" alt="" loading="lazy">
+    <img src="<?php echo asset('assets/logoasar.png') ?>" width="150" alt="" loading="lazy">
   </div>
   <div class="col-sm-6" style="margin-top:25px">
     <center>

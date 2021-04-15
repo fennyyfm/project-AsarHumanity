@@ -23,7 +23,7 @@
 @section('nav-about') <li class="nav-item"> @endsection
 
 @section('content')
-<div class="main" style="margin-top:100px;">
+<div class="main" style="margin-top:100px;" data-aos="fade-up">
   <div class="main-content">
     <div class="container">
       <div class="row">
@@ -54,7 +54,7 @@
                         <td>{{ $key->tgl_distribusi }}</td>
                         <td>{{ $key->count }}</td>
                         <td>
-                          <a class="btn" href="/detailReport/{{ $key->tgl_distribusi }}" role="button">Lihat Detail</a>
+                          <a class="btn btn-warning" href="/detailReport/{{ $key->tgl_distribusi }}" role="button">Lihat Detail</a>
                         </td>
                       </tr>
                     @endforeach

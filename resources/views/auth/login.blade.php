@@ -11,7 +11,10 @@
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   <style>
     body {
-      background-image: url(<?php echo asset('admin/assets/asar/cb.png') ?>);
+      background-image: url(<?php echo asset('assets/asset/asar/bg.jpg') ?>);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
     }
     .form-control {
       border-radius: 50px;
@@ -23,8 +26,8 @@
       background-color:#E3A425;
     }
   </style>
-	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/apple-icon.png')}}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin/assets/img/favicon.png')}}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets/asset/img/apple-icon.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('assets/asset/img/favicon.png')}}">
 </head>
 <body>
   <div class="container-fluid" style="margin-top:100px">
@@ -35,7 +38,7 @@
 						{{csrf_field()}}
 						<p class="lead">Login Admin</p>
 						<div class="logo text-center">
-							<img src="{{asset('admin/logoasar.png')}}" alt="ASAR Logo">
+							<img src="{{asset('assets/logoasar.png')}}" alt="ASAR Logo">
 						</div>
 						<div class="form-group">
 							<label for="signin-email" class="control-label sr-only" >Email</label>

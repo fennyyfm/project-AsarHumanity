@@ -1,9 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-
 <div class="panel-heading">
-    <h3 class="panel-title">Daftar Relawan</h3>
+    <h3 class="panel-title">Data Relawan</h3>
+</div>
+<div class="panel-body">
         <table class="table table-hover">
             <tr>
                 <th>No</th>
@@ -17,7 +18,9 @@
                     <td>{{ $key->nama_relawan }}</td>
                     <td>{{ $key->kota }}</td>
                     <td>
-                        <button class='btn btn-warning'><a href="/detailRelawan/{{ $key->id }}">Lihat Detail</a></button>
+                        <form action="/detailRelawan/{{ $key->id }}">
+                            <input type="submit" value="Lihat Detail" class="btn btn-warning"  />
+                        </form>
                     </td>
                 </tr>
             @endforeach

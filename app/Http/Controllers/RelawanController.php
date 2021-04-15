@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Relawan;
 use App\Absensi;
+use App\Pelatihan;
 
 class RelawanController extends Controller
 {
@@ -13,17 +14,26 @@ class RelawanController extends Controller
   }
 
   public function addRelawan(){
-      $relawan = new Relawan();
-
-      $relawan->nama_relawan = request('nama_relawan');
-      $relawan->kontak_relawan = request('kontak_relawan');
-      $relawan->alamat = request('alamat');
-      $relawan->kota = request('kota');
-      $relawan->provinsi = request('provinsi');
-      $relawan->tgl_daftar = date('Y-m-d');
-
-      $relawan->save();
-
+      $data = [];
+      if(request('kategori') == 'relawan') {
+          $data = new Relawan();
+          
+          $data->nama_relawan = request('nama_relawan');
+          $data->kontak_relawan = request('kontak_relawan');
+      }else if(request('kategori') == 'pelatihan') {
+          $data = new Pelatihan();
+          
+          $data->nama_pelatihan = request('nama_relawan');
+          $data->kontak_pelatihan = request('kontak_relawan');
+      }
+      
+      $data->alamat = request('alamat');
+      $data->kota = request('kota');
+      $data->provinsi = request('provinsi');
+      $data->tgl_daftar = date('Y-m-d');
+    
+      $data->save();
+    
       return redirect('/')->with('msg', 'berhasil');
   }
 

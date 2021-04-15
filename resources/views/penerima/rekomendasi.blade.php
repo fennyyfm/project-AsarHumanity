@@ -10,6 +10,7 @@
 		<tr>
       <th>No</th>
 			<th>Nama Penerima</th>
+			<th>Alamat</th>
 			<th>Kota</th>
 			<th>Provinsi</th>
 			<th>Jumlah Paket Diterima</th>
@@ -19,12 +20,12 @@
 			<tr>
         <td>{{ $loop->index + 1 }}</td>
 				<td>{{$penerima->nama_penerima}}</td>
+				<td>{{$penerima->alamat}}</td>
 				<td>{{$penerima->kota}}</td>
 				<td>{{$penerima->provinsi}}</td>
-				<td>{{$penerima->alamat}}</td>
 				<td>{{$penerima->jumlah_menerima}}</td>
 				<td>
-					<a href="/penerima/{{$penerima->id}}/pilih" class="btn btn-success btn-sm">Pilih</a>
+					<a href="/penerima/{{$penerima->id}}/pilih" class="btn btn-warning">Pilih</a>
 				</td>
 	    </tr>
     @endforeach

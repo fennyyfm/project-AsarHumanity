@@ -37,7 +37,7 @@
 </div>
 <div class="row">
   <div class="container-fluid" style="margin-top:150px;">
-    <img src="<?php echo asset('admin/logoasar.png') ?>" width="250" alt="" loading="lazy">
+    <img src="<?php echo asset('assets/logoasar.png') ?>" width="250" alt="" loading="lazy">
     <div class="row" style="margin-top:50px;margin-bottom:50px">
       <div class="col-sm-2"></div>
       <div class="col-sm-8">

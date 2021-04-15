@@ -17,12 +17,13 @@ Route::get('/about', function (){
 	return view('about');
 });
 
-Route::get('/login', 'AuthController@login')->name('login');
+Route::get('/admin', 'AuthController@login')->name('login');
 Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout','AuthController@logout');
 
 Route::get('/', 'DonaturController@index');
 Route::get('/formDonasi', 'DonaturController@formDonasi');
+Route::get('/konfirmasi', 'DonaturController@konfirmasi');
 Route::post('/add', 'DonaturController@addDonatur');
 
 Route::get('/formRelawan', 'RelawanController@formRelawan');
@@ -64,9 +65,15 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/listBarang', 'BarangController@index');
 	Route::get('/formStok/{id}', 'BarangController@formStok');
 	Route::get('/formEdit/{id}', 'BarangController@formEdit');
+	Route::get('/formStokKategori/{id}', 'BarangController@formStokKategori');
+	Route::get('/formEditKategori/{id}', 'BarangController@formEditKategori');
 	Route::post('/tambahBarang', 'BarangController@tambahBarang');
 	Route::post('/tambahStok/{id}', 'BarangController@tambahStok');
 	Route::post('/editBarang/{id}', 'BarangController@editBarang');
+	Route::post('/tambahStokKategori/{id}', 'BarangController@tambahStokKategori');
+	Route::post('/editKategori/{id}', 'BarangController@editKategori');
+	
+	Route::post('/tambahKategori', 'KategoriController@tambahKategori');
 
 	Route::get('/formKegiatan', 'KegiatanController@formKegiatan');
 	Route::post('/tambahKegiatan', 'KegiatanController@tambahKegiatan');

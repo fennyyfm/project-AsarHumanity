@@ -21,6 +21,8 @@ class CreateDonaturTable extends Migration
             $table->string('status');
             $table->date('tgl_konfirmasi')->nullable()->default(null);
             $table->bigInteger('jumlah')->unsigned();
+            $table->bigInteger('id_kategori')->unsigned();
+            $table->foreign('id_kategori')->references('id')->on('kategori');
         });
     }
 

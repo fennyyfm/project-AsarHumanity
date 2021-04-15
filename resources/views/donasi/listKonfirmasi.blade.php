@@ -19,8 +19,8 @@
                     <td>{{ $key->nama_donatur }}</td>
                     <td>{{ $key->status }}</td>
                     <td>
-                        <button class='btn btn-warning'><a href="/detailDonatur/{{ $key->id }}">Lihat Detail</a></button>
-                        <button class='btn btn-success'><a href="/updateStatus/{{ $key->id }}">Update Status</a></button>
+                       <a href="/detailDonatur/{{ $key->id }}" class="btn btn-warning">Lihat Detail</a></button>
+                        <a href="/updateStatus/{{ $key->id }}" class="btn btn-warning">Update Status</a></button>
                     </td>
                 </tr>
             @endforeach

@@ -5,7 +5,7 @@
 <div class="panel-heading">
 	<h3 class="panel-title">Data Penerima</h3>
 	<div class="right">
-		<button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr-plus-circle"></i>Tambah data penerima</button>
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Tambah data penerima</button>
 	</div>
 
 </div>
@@ -55,7 +55,7 @@
 					</div>
 					<div class="form-group">
 						<label for="alamat">Alamat</label>
-					   	<textarea class="form-control" name="alamat" rows="3"></textarea>
+					   	<textarea class="form-control" name="alamat" rows="3"placeholder="Alamat Lengkap"></textarea>
 					</div>
 					<div class="form-group">
 					   	<label for="kota">Kota</label>
@@ -72,7 +72,7 @@
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="submit" class="btn btn-primary">Submit</button>
+		        <button type="submit" class="btn btn-success">Submit</button>
 			</div>
 				</form>
 		</div>
